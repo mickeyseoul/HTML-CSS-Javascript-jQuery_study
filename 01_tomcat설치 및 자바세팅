@@ -1,0 +1,28 @@
+▶tomcat설치 및 자바세팅
+1)
+Tomcat 설치
+설치중.. 다운로드 경로
+C:\Program Files\Apache Software Foundation\Tomcat 9.0
+-> 변경 C:\Tomcat 9.0
+
+2)
+자바실행
+workspace-이름web_pyr로 설정
+자바이미 실행중이라면
+File - Switch workspace-이름web_pyr로 설정
+
+3)
+프로젝트생성
+File-new-Dynamic Web Project
+
+HTML 파일 생성
+프로젝트클릭-src-webapp우클릭-new-HTML File
+
+4)
+<meta charset="UTF-8"> 자동 설정하는 방법
+window-preference-web-html Files-encoding
+
+EUC-KR :한국어,영어만 가능
+
+▶주석
+드래그후 ctrl+shirt+/
