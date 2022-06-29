@@ -94,3 +94,12 @@ margin: 20px; /* 바깥쪽 여백을 설정 */
 !important > 인라인 스타일 > 클래스/속성/가상 > 아이디 > 태그 > 전체
 
 
+▶chap3
+font
+
+list
+
+padding /* trbl */ /*  p영역 안쪽 여백 */
+margin /* trbl */ /* p영역 바깥쪽 여백 설정 */
+
+
