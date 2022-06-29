@@ -4,5 +4,93 @@ Cascading Style Sheet
 구조 HTML
 디자인 CSS
 
+속성=값
+
+태그(요소)
+블럭요소: h1~h6 그줄 다 차지 ,p tag
+인라인요소: span 딱 그 글자크기만큼만 차지
+
 p tag 문단의 한줄 공백
+
+▶chap 01
+css방식
+1) inline
+HTML영역
+
+2) style 내장
+CSS영역
+<style></style>
+
+3) link 외장
+<link></link>
+
+▶chap 02
+선택자 정의하기
+1)
+태그 선택자
+
+nth-child
+/* 첫번째 li 태그  */
+li:first-child{ /* 첫번째 first-child 마지막 last-child */
+color: lime;
+}
+/* 짝수번째 li 태그  */
+li:nth-child(even) { /* even 짝수 odd 홀수 */
+color: blue;
+}
+/* 세번째 li 태그  */
+li:nth-child(3) { /* 세번째 */
+color: red;
+}
+
+2)
+class 선택자 :별칭설정 두군데 이상 사용
+id 선택자 :별칭설정 주로 한군데 사용
+
+3) 속성 선택자 :요소를 이용하여 선택자를 정의 attibute
+a[target]{ /* a 태그에 target 속성 있는 곳만 */ /* CSS영역 */
+color:green;
+font-size:15px;
+text-decoration: none;
+}
+
+4) 자식/자손
+/* body>div>h2 */
+<style type="text/css">
+div > h2 { /* 자식 */
+	color: red;
+}
+body h2 { /* div>h2 */ /*자손은 자식포함 body h2 */ /* h2 */
+	color: red;
+}
+</style>
+
+5)
+가상클래스 선택자 pseudo
+a:hover{
+background-color: #cf3; /* 마우스 올리면 적용됨 */ 
+}
+a:visited {
+background-color: pink; /* 방문하고나면 적용됨 */
+}
+</style>
+
+7) 전체 선택자 *
+*{ /* 전체 선택자 */
+background-color:yellow;
+margin: 20px; /* 바깥쪽 여백을 설정 */
+}
+
+8) 그룹선택자
+<style type="text/css">
+/* 여러 선택자에 같은 CSS 속성을 정의합니다.  */
+  h1,h2,h3,h4{
+  ont-size: 20px;
+  font-family: "맑은 고딕",궁서; /* 공백이 있는 글꼴은 ""로 묶어줘야 */ /* 내컴퓨터에 1번째 글꼴이 없는 경우 두번째.. */
+  }
+</style>
+
+▷선택자 우선순위
+!important > 인라인 스타일 > 클래스/속성/가상 > 아이디 > 태그 > 전체
+
 
