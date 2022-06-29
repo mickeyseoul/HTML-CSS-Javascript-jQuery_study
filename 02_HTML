@@ -1,0 +1,61 @@
+HTML
+
+01) 
+태그(요소)
+블럭요소: h1~h6 그줄 다 차지 ,p tag
+인라인요소: span 딱 그 글자크기만큼만 차지
+
+  <h1>h1크기</h1>
+  <h2>h2크기</h2>
+  <h3>h3크기</h3>
+  <hr> <!-- 선을 하나 그을 때 사용 -->
+  <h4>h4크기</h4>
+  <h5>h5크기</h5>
+  <h6>h6크기</h6> <!-- 점점 작아짐 -->
+
+02) 목록 작성
+ul: Unordered list
+ol: Ordered list 
+
+  <ul type="circle"> <!-- 안쓰면 기본 타입 disc -->
+    <li>html</li>
+    <li>css</li>
+    <li>javascript</li>
+    <li>jQuery</li>
+  </ul>
+
+용어정의
+  <dl>
+    <dt>HTML</dt>
+    <dd>HTML은 Hyper Text Markup Language의 약자입니다.</dd>
+  </dl>
+
+03) img
+  <img src=".\images\cafe1.jpg"></img> <!-- 닫는tag생략가능 -->
+  <img src=".\images\cafe1.jpg" width="300" heigth="200" title="카페 이미지 입니다."
+  alt="우리동네 카페">
+
+.\ 현재 작업하고있는 폴더 지칭
+title 이미지에 마우스 가져다대면 나타나는 문자열
+alt 이미지를 잘 못 가져왔을때 대신하는 문자열
+
+04) audio
+  <audio>
+    <source src="./media/music.mp3"> <!-- Safari, Chrome -->
+    <source src="media/music.ogg"> <!-- FireFox, Opera -->
+  </audio>
+
+  <video width="350" height="250" controls autopaly loop=loop> <!-- 속성과 값이 같으면 생략 가능*** -->
+    <source src=".\media\myMovie.mp4">
+    <source src="media\myMovie.ogv">
+  </video>
+
+05) a 태그를 통한 하이퍼링크
+<a href=" ">다음</a>
+<a href=" "><img src=" "></a>
+
+<a href=" " target=" ">다음</a>
+target="_blank"" 새로운 창으로 연결시킴
+target="_self" 기본값 기존창에서 연결
+
+
