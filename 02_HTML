@@ -67,29 +67,31 @@ target="_self" 기본값 기존창에서 연결
 07) iframe
 
 08) table
-<table>
-<tr> <!-- 두줄 -->
-<td>1</td> <!-- 세칸 -->
-<td>2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-
+  <table>
+    <tr> <!-- 두줄 -->
+      <td>1</td> <!-- 세칸 -->
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+  </table>
+  
 09) table rowspan/colspan
-<table>
-<tr> 
-<td rowspan="2">1</td> <!-- 위쪽에서 위아래로 합침 -->
-<td>2</td>
-<td>3</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">2</td> <!-- 좌에서 좌우로 합침 -->
-</tr>
-
+  <table>
+    <tr> 
+      <td rowspan="2">1</td> <!-- 위쪽에서 위아래로 합침 -->
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td colspan="2" valign="top">2</td> <!-- 좌에서 좌우로 합침 -->
+    </tr>
+ </table>
+ 
 table align :테이블의 배치
 tr,td align :테이블 안의 문자열의 배치
 valign :center top bottom
