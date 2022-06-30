@@ -59,13 +59,16 @@ var c = Array('one','two','three');
 3)
 var d = ['rose','tulip',"lily","cosmos"];
 
-다양한 데이터타입 묶기
+4)다양한 데이터타입 묶기 가능
 var e = [123,0.98, "javascript", true];
-for( x in e ){ //확장포문
-document.write(e[x]+"<br>")
-}
 java의 배열 :같은 타입의 데이터을 한데 묶어서 관리
 javascript의 배열 :다양한 데이터 타입 묶음 가능
+
+▷확장for문
+for( x in e ){ 
+document.write(e[x]+"<br>")
+}
+
 
 ▷함수
 arr.concat(arr2);
@@ -98,27 +101,27 @@ arr.reverse(); //내림차순 정렬
 	
 3)
 	var arr = [
-				      [10,20,30],
-				      [40,50,60,70]
-		      	];
+			[10,20,30],
+			[40,50,60,70]
+		   ];
 	
 4)2차원 배열 확장포문
-	for( i in arr){ //i=0 1 i에 행번호가 들어감(주소값X)***
-		document.write(i+"<br>");
-		for( j in arr[i]){
-			document.write(arr[i][j]+"<br>");
-		}
+for( i in arr){ //i=0 1 i에 행번호가 들어감(주소값X)***
+	document.write(i+"<br>");
+	for( j in arr[i]){
+		document.write(arr[i][j]+"<br>");
 	}
+}
 	
-	/*
-	java 2차원 배열 확장포문
-	for(int[] t : arr) { //행 하나 전체가 들어감***
-		for(int x : t) {
-			System.out.print(x+" ");
-		}
-		System.out.println();  
+/*
+java 2차원 배열 확장포문
+for(int[] t : arr) { //행 하나 전체가 들어감***
+	for(int x : t) {
+		System.out.print(x+" ");
 	}
-	*/
+	System.out.println();  
+}
+*/
 	
 ▶Date 함수
 var now = new Date();
