@@ -12,6 +12,28 @@ Cascading Style Sheet
 
 p tag 문단의 한줄 공백
 
+<!-- sementic 요소: 꼭 필요하지는 않지만 보기 쉽게하는 역할 -->
+<header> <!-- 문서의 가장 큰 제목(없어도 됨) -->
+<section> <!-- 본문내용(없어도 됨) -->
+
+<nav> <!-- 메뉴 표현 태그(없어도 가능,시멘틱요소) -->
+
+&amp &
+&quot " (큰 따옴표안은 아무리 스페이스로 띄어도 스페이스 한번임)
+-> &nbsp; 스페이스 한번
+-> &nbsp;  &nbsp; 스페이스 두번 출력됨
+
+/* 브라우저별 출력이 안될경우 붙이는 접두어
+vendor prefix
+chrome,Safari: -webkit-
+Firefos: -moz-
+IE: -ms-
+*/
+
+학습 퀴즈 사이트
+w3shcools
+https://www.w3schools.com/
+
 ▶chap 01
 css방식
 1) inline
