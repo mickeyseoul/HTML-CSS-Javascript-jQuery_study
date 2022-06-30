@@ -1,3 +1,11 @@
+Javascript
+큰 따옴표 작은 따옴표 구분 X
+문자열 비교 ==로 가능 != java의 .equals
+
+api 사이트
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+
+------------------------------------------------------------------------------------------
 01_Basic
 ▶대화 상자
 alert 확인
