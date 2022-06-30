@@ -43,4 +43,105 @@ document.write(eval("1.23")+"<br>"); // 1.23
 ▶반복문
 for
 while
+------------------------------------------------------------------------------------------
+
+02_implicitObj
+▶Array
+▷배열 만드는 방법
+1)
+var a = new Array(3); 방3개
+var a = Array(3);
+a[0]=10;
+a[1]=20;
+2)
+var b = new Array(3,4,5);
+var c = Array('one','two','three');
+3)
+var d = ['rose','tulip',"lily","cosmos"];
+
+다양한 데이터타입 묶기
+var e = [123,0.98, "javascript", true];
+for( x in e ){ //확장포문
+document.write(e[x]+"<br>")
+}
+java의 배열 :같은 타입의 데이터을 한데 묶어서 관리
+javascript의 배열 :다양한 데이터 타입 묶음 가능
+
+▷함수
+arr.concat(arr2);
+arr.slice(1,3); /* 1부터 3전까지 출력 */
+arr.sort(); //오름차순 정렬
+arr.reverse(); //내림차순 정렬
+
+▷2차원배열
+2차원 배열 만들기
+1)
+	var arr = new Array(2);
+	arr[0] = new Array(10,20,30);
+	arr[1] = new Array(40,50,60);
+	for(var i=0;i<arr.length;i++){
+		for(var j=0;i<arr[i].length;j++){
+			document.write(arr[i][j]+" ");
+		}
+	}
+	document.write("<br>");
+	
+2)
+	var arr = new Array(2);
+	arr[0] = new Array();
+	arr[1] = new Array();
+	arr[0][0] = 10;
+	arr[0][1] = 20;
+	
+	arr[1][1] = 60;
+	arr[1][2] = 70;
+	
+3)
+	var arr = [
+				      [10,20,30],
+				      [40,50,60,70]
+		      	];
+	
+4)2차원 배열 확장포문
+	for( i in arr){ //i=0 1 i에 행번호가 들어감(주소값X)***
+		document.write(i+"<br>");
+		for( j in arr[i]){
+			document.write(arr[i][j]+"<br>");
+		}
+	}
+	
+	/*
+	java 2차원 배열 확장포문
+	for(int[] t : arr) { //행 하나 전체가 들어감***
+		for(int x : t) {
+			System.out.print(x+" ");
+		}
+		System.out.println();  
+	}
+	*/
+	
+▶Date 함수
+var now = new Date();
+now.toString()
+now.toDateString() //날짜만
+now.toTimeString() //시간만
+
+now.getYear()+1900 //기준 1900년
+now.getUTCFullYear() //2022년
+now.getMonth()+1 //0월 1월
+now.getDate()
+
+now.getHours();
+now.getMinutes()
+now.getSeconds()
+
+
+▶Math 함수
+Math.max(10,30,2,50)
+Math.min(10,30,2,50)
+Math.round(1.7) //2
+Math.round(1.3) //1
+Math.ceil(1.3) //2
+Math.floor(1.7) //1 == parseInt(1.7)
+Math.floor(Math.random()*45+1)
 
