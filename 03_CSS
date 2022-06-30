@@ -98,8 +98,33 @@ margin: 20px; /* 바깥쪽 여백을 설정 */
 font
 
 list
+목록 문단에 이미지, 위치, 스타일 제어하기
 
+padding/margin
+요소의 크기 지정 및 여백 처리하기
 padding /* trbl */ /*  p영역 안쪽 여백 */
 margin /* trbl */ /* p영역 바깥쪽 여백 설정 */
+
+
+▶chap 4 속성
+
+float
+이미지를 글과 같은 선상에 왼쪽/오른쪽 띄우기
+
+position
+
+letter-spacing:1px; /* 글자 사이 간격 */
+
+display
+반복되는 요소들 display 어떻게 할 것인가
+
+column
+기사형식으로 문단 나누기
+
+transform 
+이미지 회전시킬때
+
+media
+화면을 축소/확대 할때 화면의 해상도에 따라 그때그때 다른이미지가 나오도록
 
 
