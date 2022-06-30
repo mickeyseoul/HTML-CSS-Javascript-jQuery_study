@@ -116,7 +116,7 @@ margin: 20px; /* 바깥쪽 여백을 설정 */
 !important > 인라인 스타일 > 클래스/속성/가상 > 아이디 > 태그 > 전체
 
 
-▶chap3
+▶chap3 속성
 font
 
 list
@@ -128,7 +128,7 @@ padding /* trbl */ /*  p영역 안쪽 여백 */
 margin /* trbl */ /* p영역 바깥쪽 여백 설정 */
 
 
-▶chap 4 속성
+▶chap 4 CSS 포지셔닝 속성
 
 float
 이미지를 글과 같은 선상에 왼쪽/오른쪽 띄우기
