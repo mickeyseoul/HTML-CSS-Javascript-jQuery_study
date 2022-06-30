@@ -1,0 +1,46 @@
+01_Basic
+▶대화 상자
+alert 확인
+confirm 확인/취소 true/false 리턴
+prompt (문자열 입력 가능) 문자열 리턴
+
+▶함수
+<script type="text/javascript">
+  //summer함수 정의
+  function summer(check){  //(자료형안씀)check변수
+    if(check==true){
+     alert("여름은 더운 계절입니다");
+    }else{
+      alert("여름은 시원한 계절입니다");
+    }
+  }
+</script>
+...
+<h2>여름은 더운 계절입니까?</h2>
+<form> <!-- jsp -->
+  <input type="button" value="예" onClick="summer(true)"> <!-- summer 함수 호출 -->
+  <input type="button" value="아니오" onClick="summer(false)">
+</form>
+
+
+▶전역변수/지역변수
+var 붙여야 하는 경우: 지역변수
+var 안붙여도 되는 경우: 전역변수 선언초기화시 , 전역변수 사용시
+
+▶문자열을 정수로 바꿔주는 함수
+Number("15+3*4") //NaN Not a Number 정수외의 것 있으면 안됨
+parseInt("15+3*4") //15
+eval("15+3*4") //27
+
+document.write(Number("1.23")+"<br>"); //1.23
+document.write(parseInt("1.23")+"<br>"); //1 딱 정수만
+document.write(eval("1.23")+"<br>"); // 1.23
+
+
+▶조건문
+
+
+▶반복문
+for
+while
+
