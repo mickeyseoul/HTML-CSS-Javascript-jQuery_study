@@ -1,19 +1,19 @@
 ▶HTML 
 Hyper Text Markup Language
 
-마크업 Markup
-글자크기 글자색 등등
+▷마크업 Markup
 태그(tag)를 사용해 문서에서 어느 부분이 제목이고 본문인지, 어느부분이 사진이고 링크인지 표시하는 것
+글자크기 글자색 등등
 
-태그
+▷태그와 속성
+1)태그
+<>
 
-속성
+2)속성
 속성="값" 
 속성과 값이 같으면 생략 가능
 
 
-
- 
 태그(요소)
 01)
 블럭요소: 
@@ -115,6 +115,11 @@ target="_self" 기본값 기존창에서 연결
   <h1 id="Toy3"><b><font color="green" size="10" face="궁서체">Toy3부분입니다.</font></b></h1>
 
 ▷속성
+<face>
+face
+size
+color
+
 
 
 ▶iframe
@@ -130,6 +135,7 @@ target="_self" 기본값 기존창에서 연결
   <iframe width="80%" height="400" src="home.html" name="mainframe"></iframe>
   
 ▷속성
+<iframe>
 width
 height
 name
@@ -137,11 +143,8 @@ name
 
 ▶표를 만드는 태크
 <table>,<tr>,<td>
--속성 rowspan,colspan
 
-
-08) table
-  <table>
+ <table>
     <tr> <!-- 두줄 -->
       <td>1</td> <!-- 세칸 -->
       <td>2</td>
@@ -154,7 +157,19 @@ name
     </tr>
   </table>
   
-09) table rowspan/colspan
+▷속성 
+rowspan :위쪽에서 위아래로 합침
+colspan :좌에서 좌우로 합침
+align	="enter"
+	left
+	right
+	*
+	<table>-테이블의 배치
+	<tr>,<td>의-테이블 안의 문자열의 배치
+valign="center" 
+	top 
+	bottom
+
   <table>
     <tr> 
       <td rowspan="2">1</td> <!-- 위쪽에서 위아래로 합침 -->
@@ -166,7 +181,4 @@ name
     </tr>
  </table>
  
-table align :테이블의 배치
-tr,td align :테이블 안의 문자열의 배치
-valign :center top bottom
 
