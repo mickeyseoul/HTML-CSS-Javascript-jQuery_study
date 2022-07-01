@@ -6,17 +6,16 @@ Hyper Text Markup Language
 글자크기 글자색 등등
 
 ▷태그와 속성
-1)태그
+1)태그(요소)
 <>
 
 2)속성
 속성="값" 
 속성과 값이 같으면 생략 가능
+속성이든 값이든 ctrl+스페이스바 자동완성 기능
 
 
-태그(요소)
-01)
-블럭요소: 
+▶블럭요소 :텍스트를 덩어리로 묶어주는 태그 //선택한 텍스트 글자에만 적용되는 것이 아니라, 텍스트가 포함된 블록 전체에 적용됨
 <hn> h1~h6 제목 표시하기 그줄 다 차지 
 <p> 단락만들기
 <br> 줄바꾸기
@@ -30,13 +29,32 @@ Hyper Text Markup Language
   <h5>h5크기</h5>
   <h6>h6크기</h6> <!-- 점점 작아짐 -->
 
-2)
-인라인요소:
+
+▶인라인요소 :텍스트를 한줄로 표시하는 태그 //줄바꿈없이 텍스트를 표시 //생략 불가능
 <strong> 굵게
 <b>
 <em> 이탤릭체
 <i>
 <span> 줄바꿈없이 영역 묶기 //딱 그 글자크기만큼만 차지
+<u>
+
+
+▶font 관련 태그
+<font>
+<strong> 굵게
+<b>
+<em> 이탤릭체
+<i>
+<u> 밑줄
+
+  <h1 id="Toy3"><b><font color="green" size="10" face="궁서체">Toy3부분입니다.</font></b></h1>
+
+▷속성
+<face>
+face
+size
+color
+
 
 ▶목록을 만드는 태그
 <ul>,<li> 순서 없는 목록 만들기   ul: Unordered list
@@ -57,7 +75,11 @@ Hyper Text Markup Language
   </dl>
  
  ▷속성
- type="disc"
+<ul>
+type	="disc" 기본
+	circle
+<ol>
+type	="1" 기본
  
 
 ▶img
@@ -102,24 +124,6 @@ href
 href="#" 해당 페이지 맨위로 이동하기/#뒤에 붙은 부분으로 이동하기
 target="_blank"" 새로운 창으로 연결시킴
 target="_self" 기본값 기존창에서 연결
-
-
-▶font 관련 태그
-<font>
-<strong> 굵게
-<b>
-<em> 이탤릭체
-<i>
-<u> 밑줄
-
-  <h1 id="Toy3"><b><font color="green" size="10" face="궁서체">Toy3부분입니다.</font></b></h1>
-
-▷속성
-<face>
-face
-size
-color
-
 
 
 ▶iframe
