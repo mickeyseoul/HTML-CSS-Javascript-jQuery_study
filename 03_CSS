@@ -1,10 +1,8 @@
-CSS
+▶CSS
 Cascading Style Sheet
 
-구조 HTML
-디자인 CSS
-
-속성=값
+HTML	구조	 속성="값"
+CSS	디자인	속성:값
 
 <!-- sementic 요소: 꼭 필요하지는 않지만 보기 쉽게하는 역할 -->
 <header> <!-- 문서의 가장 큰 제목(없어도 됨) -->
@@ -27,7 +25,7 @@ IE: -ms-
 학습 퀴즈 사이트
 w3shcools
 https://www.w3schools.com/
-
+------------------------------------------------------------------------------------------------------------------------------
 ▶chap 01
 css방식
 1) inline
@@ -52,7 +50,7 @@ CSS영역
 CSS영역
 	<link rel="stylesheet" type="text/css" href="Style.css">
 
-
+----------------------------------------------------------------------------------------------------------------------------------
 ▶chap 02
 ▷선택자 우선순위
 !important > 인라인 스타일 > 클래스/속성/가상 > 아이디 > 태그 > 전체
@@ -164,19 +162,154 @@ id 선택자 :별칭설정 주로 한군데 사용
 	</style>
 
 
-
+--------------------------------------------------------------------------------------------------------------------------------
 ▶chap3 속성
-font
+1) font
+	<style type="text/css">
+	#box1 > h2{
+			font-family: "Times New Roman", sans-serif;
+			font-size: 20pt; /* 10pt 13px 0.8em */
+			font-weight: bold;
+			font-style: italic;
+	}
+	#box3 h2{
+			font: italic 20pt bold "Times New Roman", sans-serif ; /* 순서 요 */
+	}
+	</style>
 
-list
+2) list
 목록 문단에 이미지, 위치, 스타일 제어하기
+	<style type="text/css">
+	#list1{
+		/* list-style-type: square; */
+		list-style-image: url(./../images/arrow.gif)
+		}
+	</style>
+	
+./ 현재 파일의 위치한 디렉토리 (생략가능)
+../ 현재 파일의 한단계 바깥 디렉토리
 
-padding/margin
+3) padding/margin
 요소의 크기 지정 및 여백 처리하기
-padding /* trbl */ /*  p영역 안쪽 여백 */
-margin /* trbl */ /* p영역 바깥쪽 여백 설정 */
+padding	:p영역 안쪽 여백 	   trbl순서
+margin	:p영역 바깥쪽 여백 설정	trbl순서
 
+	<style type="text/css">
+	p{
+	    border: 2px dotted cyan;
+	    padding: 10px 20px 50px 100px; /* trbl */
+	    margin: 50px 20px; /* 50px 20px *//* trbl */
+	    margin-left: 30px;
+	    margin-top: 30px
+	}
+	</style>
+	
+4) border
+테두리
+	<style type="text/css">
+	p{
+		/* border-bottom: 1px dashed blue; */
+		border-bottom-style: dashed;
+		border-bottom-width: 1px;
+		border-bottom-color: blue;
+	}
+	</style>
+	
+모서리가 둥근 테두리 만들기
+	<style type="text/css">
+	.round1{
+			border: 10px solid #ff9933;
+			border-radius: 10px 20px 30px 40px; /* 왼쪽 위에서 기계방향으로 */
+			border-radius: 10px 20px /* 10px 20px */	
+	}
+	</style>
+	
+5) background
+	<style type="text/css">
+	body{
+		background-color: silver;
+		background-image: url("../images/shoes1.png");
+		background-repeat: repeat-y; /* y축으로 반복 */
+		background-position: top right; /* 시작위치 */
+		background-attachment: fixed; /* 이미지 고정 기본은 scroll */
+	}
+	div{
+		background: url("../images/bg1.png") repeat-y fixed
+	}
+	</style>
+	
+06) shadow
+	<style type="text/css">
+	h1{
+		width: 400px;
+		text-align: center;
+		background: yellow;
+		text-shadow: 10px 20px 15px #000; /* x축(만큼 떨어짐) y축(만큼 떨어짐) 번짐정도 색 */
+		box-shadow: 10px 20px 10px #f06; /* x축(만큼 떨어짐) y축(만큼 떨어짐) 번짐정도 색 */
+	}
+	</style>
+	
+07) table
+	<style type="text/css">
+	#table1 th, #table1 td{
+				border: 1px solid;
+				padding: 5px 10px;
+	}
+	#table1 th{
+			background-color: #b2ebf4;
+	}
+	#table1 td:first-child{
+				   background-color: #aaa;
+	}
+	#table1 tr:last-child td{
+				    background-color: yellow;
+	}
+	</style>
+	--------------------------------------------------------
+	<body>
+        <table id="table1">
+          <caption>렌터카 요금표</caption> 
+            <tr>
+              <th>차종 </th> <!-- 제목 굵게 나옴 -->
+              <th>24시간</th>
+              <th>48시간</th>
+              <th>72시간</th>
+              <th>추가요금</th>
+            </tr>
+            <tr>
+              <td>SM3</td>
+              <td> 45,000</td>
+              <td> 90,000</td>
+              <td> 135,000</td>
+              <td> 6,000</td>
+            </tr>
+            <tr>
+              <td>모닝</td>
+              <td>42,000</td>
+              <td>84,000</td>
+              <td>126,000</td>
+              <td>6,000</td>
+            </tr>
+            <tr>
+              <td>쏘울</td>
+              <td> 61,000</td>
+              <td> 122,000</td>
+              <td> 183,000</td>
+              <td> 9,000</td>
+            </tr>
+            <tr>
+              <td>윈스톰</td>
+              <td> 94,000</td>
+              <td> 188,000 </td>
+              <td> 282,000</td>
+              <td> 13,000</td>
+            </tr>
+            <tr>
+              <td colspan="5">제주 5월 기준이며 추가 요금은 시간당입니다. </td>
+            </tr>
+        </table>
 
+--------------------------------------------------------------------------------------------------------------------------------------
 ▶chap 4 CSS 포지셔닝 속성
 
 float
