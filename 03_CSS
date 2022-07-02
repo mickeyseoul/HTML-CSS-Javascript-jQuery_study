@@ -311,24 +311,73 @@ margin	:p영역 바깥쪽 여백 설정	trbl순서
 
 --------------------------------------------------------------------------------------------------------------------------------------
 ▶chap 4 CSS 포지셔닝 속성
+1) position
 
-float
-이미지를 글과 같은 선상에 왼쪽/오른쪽 띄우기
+2) float
+이미지를 글과 같은 선상에 오른쪽/왼쪽 띄우기
+	<style>
+	.floatLeft{
+			float: right; /* 이미지 오른쪽에 띄우기 */
+			margin-left: 30px;
+			border: 1px solid;
+	}
+	.floatRight{
+			float: left; /* 이미지 왼쪽에 띄우기 */
+			margin-right: 30px;
+	}
+	</style>
 
-position
 
-letter-spacing:1px; /* 글자 사이 간격 */
-
-display
+3) display
 반복되는 요소들 display 어떻게 할 것인가
+이미지 정렬
+	img{
+		display:block; /* 세로로 정렬 */ /* inline 가로정렬 */
+		margin: 10px auto;
+	}
 
-column
+4) column
 기사형식으로 문단 나누기
-
-transform 
+	#bookPart{ /* div */
+			width: 850px;
+			column-count: 3;
+			column-rule: 1px dashed gray;
+			column-gap: 30px;
+			margin-left: 30px;
+			text-align: justify;
+	}
+	
+5) transform 
 이미지 회전시킬때
+	#book1 {
+			background:url(../images/snow_book1.png) no-repeat;
+			width:300px;
+			height:193px;	
+			transform: rotate(25deg); /* 중심핀 가운데 */ /* 기본 50% 50% */
+			transform-origin: 20% 40%; /* 중심핀 재설정 가로 20만큼 40만큼에 */
+		}	
 
-media
+06) media
 화면을 축소/확대 할때 화면의 해상도에 따라 그때그때 다른이미지가 나오도록
+	<style type="text/css">
+	@media only screen and (min-width: 320px) and (max-width: 799px){
+		h1{
+			background: url(../images/1.png) no-repeat center top;
+			height: 295px;
+		}
+	}
+	@media only screen and (min-width: 800x) and (max-width: 1024px){
+		h1{
+			background: url(../images/2.png) no-repeat center top;
+			height: 510px;
+		}
+	}
+	@media only screen and (min-width: 1025px){
+		h1{
+			background: url(../images/3.png) no-repeat center top;
+			height: 700px;
+		}
+	}
+	</style>
 
 
