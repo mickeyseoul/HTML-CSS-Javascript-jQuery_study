@@ -240,8 +240,40 @@ var text = f_sel[Index].text;
 	</body>
 
 
+<!-- size="10"가 보일정도로 maxlength="11"글자 내 -->
 
 
+▶String
+var str = "즐거운 자바스크립트 공부"; // new String(" ")
+str.charAt(4) //자
+str.indexOf("자바") //4
+str.indexOf("HTML") //-1
+str.slice(4,6) //자바
+str.slice(4,-3) //맨뒤에서부터 => 자바스크립트
+slice(4) //자바스크립트 공부
 
+str.substring(4,6) //자바
+str.substr(4,6) //4부터 6글자가져옴 =>자바스크립트
+
+str.toLowerCase()
+str.toLowerCase()
+
+----------------------------------------------------------------------------------------
+03_windowObj
+window객체 안의 함수들은 window 생략 가능
+▶window.open
+window.open("url","이름","가로 세로 크기")
+
+부모창 window.opener
+자식창(팝업창)
+
+▶window.setInterval()
+
+----------------------------------------------------------------------------------------
+04_historyObj
+▶javascript의 주된 일: jsp 가기 전 유효성 검사
+
+-----------------------------------------------------------------------------------------
+05_form
 
 
