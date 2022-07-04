@@ -3,9 +3,13 @@ Ex_07
 
 <script type="text/javascript">
 
-	var kor = prompt("국어 접수 입력하세요."," ");
-	var eng = prompt("영어 접수 입력하세요."," ");
-	var math = prompt("수학 접수 입력하세요."," ");
+	var kor = prompt("국어 접수 입력하세요.",79);
+	var eng = prompt("영어 접수 입력하세요.",88);
+	var math = prompt("수학 접수 입력하세요.",99);
+	
+	/* var kor = Number(prompt("국어 접수 입력하세요.",77));
+	var eng = Number(prompt("영어 접수 입력하세요.",88));
+	var math = Number(prompt("수학 접수 입력하세요.",99)); */
 	
 	var sum = eval(kor)+eval(eng)+eval(math);
 	document.write("합계:"+sum+"<br>");
@@ -23,24 +27,21 @@ Ex_07
 		document.write("조금 더 노력하세요.")
 	}
 	
-	if(eval(eng)>=90){
+	switch(parseInt(kor/10)){
+	case 10:
+		
+	case 9:
 		document.write("A학점<br>");
-	}else if(eval(eng)>=80){
+		break;
+	case 8:
 		document.write("B학점<br>");
-	}else if(eval(eng)>=70){
+		break;
+	case 7:
 		document.write("C학점<br>");
-	}else{
-		document.write("조금 더 노력하세요.")
-	}
-	
-	if(eval(math)>=90){
-		document.write("A학점<br>");
-	}else if(eval(math)>=80){
-		document.write("B학점<br>");
-	}else if(eval(math)>=70){
-		document.write("C학점<br>");
-	}else{
-		document.write("조금 더 노력하세요.")
+		break;
+	default:
+		document.write("조금 더 노력하세요.");
+		break;
 	}
 	
 </script>
@@ -51,31 +52,32 @@ Ex_11
 
 <style type="text/css">
 	table{
+		margin: auto; /* 가운데 정렬됨 */
 		border: 1px solid black;
 		border-collapse: collapse; /*  */
 		width: 800px;
+		text-align: center;
 		
 	}
-	th{
+	th{ /* tr:nth-child(1) */
 		border: 1px solid black;
 		background-color: pink;
 		padding: 5px;
 	}
 	td{
 		border: 1px solid black;
-		text-align: center;
+		/* text-align: center; */
 		padding: 5px;
 	}
 	
 </style>
 <script type="text/javascript">
-	var count = 0;
+	var flag = true;
 	document.write("<table>");
 	for (var i = 1; i <= 9; i++) { /* 천천히 열  */
-		count++;
 		document.write("<tr>");
 		for (var j = 2; j <= 9; j++) {/* 빠르게 행 */
-			if (count == 1) {
+			if (flag==true) {
 				document.write('<th>');
 				document.write(j + "단");
 				document.write("</th>");
@@ -84,6 +86,7 @@ Ex_11
 			}
 			if (j == 9) {
 				document.write("</tr>");
+				flag = false;
 			}
 		}
 
