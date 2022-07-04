@@ -157,3 +157,91 @@ Math.ceil(1.3) //2
 Math.floor(1.7) //1 == parseInt(1.7)
 Math.floor(Math.random()*45+1)
 
+
+▶Option
+1) html
+	<form>
+	    <select name="f"> 
+		    <option value="a">apple</option>
+		    <option selected value="g">grape</option>  <!-- selected="selected" 기본값으로 선택되게 하는 속성 -->
+		    <option value="o">orange</option>
+	    </select>
+	</form>
+
+<!-- form-select-option 한쌍 -->
+<!-- 선택시에 name에 vlaue가 들어감 -->
+
+2) javascript
+▷주요 함수
+f_sel = myform.first;
+f_sel.option[0] = new Option("선택");
+var Index = f_sel.selectedIndex;
+var value = f_sel[Index].value;
+var text = f_sel[Index].text;
+
+	<script type="text/javascript">
+	function init(){
+		var f_sel = myform.first; //form없이 select만 써주면 안됨 형식임 ★
+		f_sel.options[0] = new Option("선택"); //option배열 설정 ★
+
+		for(var i=0;i<f_arr.length;i++){
+			f_sel.options[i+1] = new Option(f_arr[i]); //text,value같으면 하나만 쓰면 됨
+			//f_sel.options[i+1] = new Option(f_arr[i],f_arr[i]);
+		}
+		
+		var s_sel = myform.second;
+		s_sel.options[0] = new Option("선택");
+	}//init()
+	
+	function firstChange(){
+		f_sel = myform.first;
+		s_sel = myform.second;
+		
+		f_selIndex = f_sel.selectedIndex; ★
+		f_selValue = f_sel[f_selIndex].value; ★
+		f_selText = f_sel[f_selIndex].text; ★
+		
+		//alert(f_selIndex+","+f_selValue+","+f_selText);
+		//1,한식,한식 => 0행
+		
+		//2번째 select에 기존 option 지우기(지우지 않으면 그 전의 선택 그대로 남아있음)
+		for(var i=s_sel.length-1; i>0; i--){ //끝에서 부터 지워야 함(앞에서 부터 지우면 당겨짐)
+			s_sel.option[i] = null;
+		}
+		
+		//2번째 select에 option 넣는 작업
+		for(var i=0;i<s_arr[f_selIndex-1].length;i++){
+			s_sel.options[i+1] = new Option(s_arr[f_selIndex-1][i]);
+		}
+		
+	}//fisrtchange
+	
+	function secondChange(){
+		f_sel = myform.first;
+		s_sel = myform.second;
+		
+		f_selIndex = f_sel.selectedIndex;
+		f_selValue = f_sel[f_selIndex].value;
+		s_selIndex = s_sel.selectedIndex;
+		s_selValue = s_sel[f_selIndex].value;
+		
+		var area = document.getElementById("result"); ★
+		area.innerHTML = "선택한 메뉴는<br>"+f_selValue+","+s_selValue+"입니다.";
+	}//secondchange
+
+---------------------------------------
+	<body onLoad="init()"> <!-- body 영역에 document 호출이 될때 (시작하자마자) 바로 실행됨 -->
+		<form name="myform">
+			<select id="first" style="width:100px" onChange="firstChange()"></select>
+			<select id="second" style="width:100px" onChange="secondChange()"></select>
+		</form>
+
+		<div id="result"></div>
+	</body>
+
+
+
+
+
+
+
