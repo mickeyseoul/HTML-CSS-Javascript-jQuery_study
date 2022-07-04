@@ -275,5 +275,41 @@ window.open("url","이름","가로 세로 크기")
 
 -----------------------------------------------------------------------------------------
 05_form
+▶form 타입 종류
+<form name="myform" action="abc.jsp">
+1) 버튼종류
+-button
+-reset
+-submit
+	<input type="button" value="버튼"></input>
+	<input type="reset" value="취소"></input>
+	<input type="submit" value="등록" onclick="return check()"></input>
+
+2) 입력받은 value를 name으로 찾는 경우 window.name.value
+-text/password
+	<input type="text" name="id"></input>
+	<input type="password" name="ps"></input>
+
+-radio
+	<input type="radio" name="song" value="낙하">낙하</input>
+	선택하면 checked 붙음
+
+2-2) 
+-select-option
+(1) html 작성시
+	<select name="fruit">
+	<option value="a">apple</option>
+	<option value="o">orange</option>
+	</select>
+
+(2) javascript 작성시
+	function firstChange(){
+		var f = window.myform.first;
+		f.options[0] = new Option("선택"); //value값 지정
+	}
+	---
+	<select id="fisrt" onchage="firstChange()"></select>
+	
+	
 
 
