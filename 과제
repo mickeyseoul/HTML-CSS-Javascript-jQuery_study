@@ -94,4 +94,83 @@ Ex_11
 	document.write("</table>");
   </script>
   
-  
+  -------------------------------------------------------------------------------------------------------------
+Javascript
+03_windowObj
+
+01) 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ex04_start_박이랑.html</title>
+</head>
+<body>
+	<h3>열기 버튼을 클릭하세요(start.html)</h3>
+	<form name="myform">
+	결과: <input type="text" name="result">
+	<br>
+	<input type="button" value="열기" onclick="open('Ex04_end_박이랑.html','pop','width=400 height=300')">
+	</form>
+</body>
+</html>
+
+02) 자식
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ex04_end_박이랑.html</title>
+<script type="text/javascript">
+	var calList = new Array("더하기", "빼기", "나누기", "곱하기");
+	function init() {
+
+		var sel_cal = myform.cal;
+		sel_cal.options[0] = new Option("선택");
+
+		for (var i = 0; i < calList.length; i++) {
+			sel_cal.options[i + 1] = new Option(calList[i]);
+		}
+
+	}
+
+	function closeButton() {
+		sel_cal = myform.cal;
+		c_index = sel_cal.selectedIndex;
+		c_value = sel_cal[c_index].value;
+		
+		var f_input = Number(myform.first.value);
+		var s_input = Number(myform.second.value);
+		
+		var result = 0;
+		switch (c_index) {
+		case 1:
+			result = f_input + s_input;
+			break;
+		case 2:
+			result = f_input - s_input;
+			break;
+		case 3:
+			result = f_input / s_input;
+			break;
+		case 4:
+			result = f_input * s_input;
+			break;
+		}
+
+		opener.myform.result.value = result;
+		
+		self.close();
+	}
+</script>
+</head>
+<body onLoad="init()">
+	<form name="myform">
+		<input type="text" name="first" style="width: 60px"></input> 
+		<select id="cal" style="width: 60px" onchange="sel_cal()"></select> 
+		<input type="text" name="second" style="width: 60px"></input> 
+		<input type="button" value="닫기" onclick="closeButton()"></input> 
+	</form>
+
+</body>
+</html>
