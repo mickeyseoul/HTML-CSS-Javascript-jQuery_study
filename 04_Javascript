@@ -40,9 +40,9 @@ Number("15+3*4") //NaN Not a Number 정수외의 것 있으면 안됨
 parseInt("15+3*4") //15
 eval("15+3*4") //27
 
-document.write(Number("1.23")+"<br>"); //1.23
-document.write(parseInt("1.23")+"<br>"); //1 딱 정수만
-document.write(eval("1.23")+"<br>"); // 1.23
+Number("1.23") //1.23
+parseInt("1.23") //1 딱 정수만
+eval("1.23") // 1.23
 
 
 ▶조건문
