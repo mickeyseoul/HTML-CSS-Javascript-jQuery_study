@@ -98,7 +98,7 @@ Ex_11
 Javascript
 03_windowObj
 
-01) 
+01) 부모
 <!DOCTYPE html>
 <html>
 <head>
@@ -109,7 +109,7 @@ Javascript
 	<h3>열기 버튼을 클릭하세요(start.html)</h3>
 	<form name="myform">
 	결과: <input type="text" name="result">
-	<br>
+	<br><br>
 	<input type="button" value="열기" onclick="open('Ex04_end_박이랑.html','pop','width=400 height=300')">
 	</form>
 </body>
@@ -166,9 +166,10 @@ Javascript
 </head>
 <body onLoad="init()">
 	<form name="myform">
-		<input type="text" name="first" style="width: 60px"></input> 
-		<select id="cal" style="width: 60px" onchange="sel_cal()"></select> 
-		<input type="text" name="second" style="width: 60px"></input> 
+		<input type="text" name="first" style="width: 100px"></input> 
+		<select id="cal" style="width: 100px" onchange="sel_cal()"></select> 
+		<input type="text" name="second" style="width: 100px"></input> 
+		<br><br><br><br><br>
 		<input type="button" value="닫기" onclick="closeButton()"></input> 
 	</form>
 
