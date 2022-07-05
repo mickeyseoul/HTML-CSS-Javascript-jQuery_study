@@ -284,7 +284,7 @@ history.go(2) 다음다음 페이지
 05_form
 ▶form 타입 종류
 <form name="myform" action="abc.jsp">
-1) 버튼종류
+▷ 버튼종류
 -button
 -reset
 -submit
@@ -292,8 +292,30 @@ history.go(2) 다음다음 페이지
 	<input type="reset" value="취소"></input>
 	<input type="submit" value="등록" onclick="return check()"></input> ★return 없으면 true/false 못받음
 
-2) 입력받은 value를 name으로 찾는 경우 
--text/password
+▷ 입력받은 value를 name으로 찾는 경우 
+
+1) select-option
+(1) html 작성시 //select-option이 간단하게 고정된 경우 html에 써주는게 간단
+	<select name="fruit">
+	<option value="a">apple</option>
+	<option value="o">orange</option>
+	</select>
+	---
+	if (myform.fruit.value == "") {
+		alert('반드시 선택해야합니다.');
+		return false;
+	}
+
+(2) javascript 작성시
+	function firstChange(){
+		var f = window.myform.first;
+		f.options[0] = new Option("선택"); //value값 지정
+	}
+	---
+	<select id="fisrt" onchage="firstChange()"></select>
+
+
+2) text/password
 	<input type="text" name="id"></input>
 	<input type="password" name="ps"></input>
 	---
@@ -301,7 +323,7 @@ history.go(2) 다음다음 페이지
 	myform.password.value
 	
 
--radio/checkbox
+3) radio/checkbox
 선택하면 checked 붙음(checkbox는 여러개 가능)
 	<input type="radio" name="song" value="낙하">낙하
 	<input type="radio" name="song" value="버터">버터
@@ -321,28 +343,7 @@ history.go(2) 다음다음 페이지
 	}
 	
 
-2-2) 
--select-option
-(1) html 작성시 //select-option이 간단하게 고정된 경우 html에 써주는게 간단
-	<select name="fruit">
-	<option value="a">apple</option>
-	<option value="o">orange</option>
-	</select>
-	---
-	if (myform.fruit.value == "") {
-		alert('반드시 선택해야합니다.');
-		return false;
-	}
 
-(2) javascript 작성시
-	function firstChange(){
-		var f = window.myform.first;
-		f.options[0] = new Option("선택"); //value값 지정
-	}
-	---
-	<select id="fisrt" onchage="firstChange()"></select>
-	
-	
 ▶javascript의 주된 일: jsp 가기 전 유효성 검사
 id name 구분
 jsp  중요
