@@ -98,80 +98,79 @@ Ex_11
 Javascript
 03_windowObj
 
-01) 부모
+01) 부모창
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Ex04_start_박이랑.html</title>
+<script type="text/javascript">
+	function openwin(){
+		open('Ex04_end_박이랑.html','pop','width=400 height=300 left=100 top=100');
+	}
+</script>
 </head>
 <body>
-	<h3>열기 버튼을 클릭하세요(start.html)</h3>
+	<h3>열기 버튼을 클릭하세요</h3>
 	<form name="myform">
 	결과: <input type="text" name="result">
 	<br><br>
-	<input type="button" value="열기" onclick="open('Ex04_end_박이랑.html','pop','width=400 height=300')">
+	<input type="button" value="열기" onclick="openwin()">
 	</form>
 </body>
 </html>
 
-02) 자식
+02) 자식창
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ex04_end_박이랑.html</title>
+<title>Ex04_end_내이름.html</title>
 <script type="text/javascript">
-	var calList = new Array("더하기", "빼기", "나누기", "곱하기");
-	function init() {
-
-		var sel_cal = myform.cal;
-		sel_cal.options[0] = new Option("선택");
-
-		for (var i = 0; i < calList.length; i++) {
-			sel_cal.options[i + 1] = new Option(calList[i]);
+	function buttonClose(){
+		if(isNaN(window.document.f.su1.value) ||  isNaN(f.su2.value) ){
+			alert('숫자가 아닙니다.');
+			return; //-> 창이 안 닫힘(함수 즉시 나가기 때문)
 		}
-
-	}
-
-	function closeButton() {
-		sel_cal = myform.cal;
-		c_index = sel_cal.selectedIndex;
-		c_value = sel_cal[c_index].value;
 		
-		var f_input = Number(myform.first.value);
-		var s_input = Number(myform.second.value);
+		var su1 = Number(window.document.f.su1.value);
+		var su2 = Number(f.su2.value);
 		
-		var result = 0;
-		switch (c_index) {
-		case 1:
-			result = f_input + s_input;
+		var oper = window.document.f.operator.value; //select의 option중에서 선택한 value 가져옴
+		switch(oper){
+		case "더하기" : 
+			result = su1+su2;
 			break;
-		case 2:
-			result = f_input - s_input;
+		case "빼기" : 
+			result = su1-su2;
 			break;
-		case 3:
-			result = f_input / s_input;
+		case "곱하기" :
+			result = su1*su2;
 			break;
-		case 4:
-			result = f_input * s_input;
+		case "나누기" :
+			result = su1/su2;
 			break;
 		}
-
+		
 		opener.myform.result.value = result;
-		
-		self.close();
+		self.close(); // window.close();
 	}
 </script>
 </head>
-<body onLoad="init()">
-	<form name="myform">
-		<input type="text" name="first" style="width: 100px"></input> 
-		<select id="cal" style="width: 100px" onchange="sel_cal()"></select> 
-		<input type="text" name="second" style="width: 100px"></input> 
-		<br><br><br><br><br>
-		<input type="button" value="닫기" onclick="closeButton()"></input> 
+<body>
+	<form name="f">
+		<input type="text" name="su1" value="14">
+		
+		<select name="operator">
+			<option value="더하기">더하기</option>
+			<option value="빼기">빼기</option>
+			<option value="곱하기">곱하기</option>
+			<option value="나누기">나누기</option>
+		</select>
+		
+		<input type="text" name="su2" value="5">
+		<br><br><br>
+		<input type="button" value="닫기" onclick="buttonClose()">
 	</form>
-
 </body>
 </html>
