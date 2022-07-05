@@ -10,22 +10,24 @@ jquery.com
 jQuery 함수
 ctrl+f 로 찾아보기
 
-javascript영역에 jquery 소스 넣기
-<script type="text/javascript" src="./../js/jquery.js"></script>
-<script type="text/javascript">
-</script>
+▶javascript영역에 jquery 소스 넣기
+
+  <script type="text/javascript" src="./../js/jquery.js"></script>
+  <script type="text/javascript">
+  </script>
 
 ▶jQuery 함수
 ▷ready() 
 :document 객체로 만들고 jQuery 사용위한 function 정의(실행도 같이 됨)
 모든 jQuery문은 이 안에서 사용가능
-$(document).ready(function(){ 
 
-});
+  $(document).ready(function(){ 
+
+  });
 
 ▷$(" ") 
 :html 태그 객체로 만들기 != $(document) 따옴표 안들어감
-따옴표 안에 css 선택자(태그,class/id,자식/자손,속성 등등) 입력
+ 따옴표 안에 css 선택자(태그,class/id,자식/자손,속성 등등) 입력
 
 
 ▷.addClass(" ")
@@ -36,9 +38,13 @@ $(document).ready(function(){
 ▷.each() == for문
 :each()-this 짝꿍
 this는 "반복 가능한 태그" 중 each로 뽑아진 태그를 의미 함
-$("반복 가능한 태그").each(function(){ 
-$(this).text()
-})
+
+  $("반복 가능한 태그").each(function(){ 
+    $(this).text()
+  })
 
 ▷.text()
+:태그의 text를 가져오는 함수
 
+▷.append()
+:태그에 text를 넣는 함수
