@@ -297,7 +297,7 @@ history.go(2) 다음다음 페이지
 	<input type="text" name="id"></input>
 	<input type="password" name="ps"></input>
 
--radio
+-radio/checkbox
 	<input type="radio" name="song" value="낙하">낙하</input>
 	선택하면 checked 붙음
 
