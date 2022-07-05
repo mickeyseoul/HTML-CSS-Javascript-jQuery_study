@@ -1,2 +1,6 @@
-HTML	구조	 속성="값"
-CSS	  디자인 속성:값
+HTML	구조	   속성="값"
+CSS	  디자인   속성:값
+
+Javascript
+큰 따옴표 작은 따옴표 구분 X
+문자열 비교 ==로 가능 != java의 .equals
