@@ -269,7 +269,7 @@ str.toLowerCase()
 03_windowObj
 window객체 안의 함수들은 window 생략 가능
 ▶window.open 팝업창 만들기
-window.open("url","이름","가로 세로 크기")
+window.open("url","이름","가로크기 세로크기 왼쪽으로부터위치 위로부터위치")
 
 부모창 window.opener
 자식창(팝업창)
