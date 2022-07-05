@@ -289,8 +289,13 @@ history.go(2) 다음다음 페이지
 
 -----------------------------------------------------------------------------------------
 05_form
+▶javascript의 주된 일: jsp 가기 전 유효성 검사
+id name 구분
+  jsp  중요
+  javascript 괜찮음
+  
 ▶form 타입 종류
-<form name="myform" action="abc.jsp">
+<form name="myform" action="abc.jsp"></form>
 ▷ 버튼종류
 -button
 -reset
@@ -301,19 +306,18 @@ history.go(2) 다음다음 페이지
 
 
 ▷ text/password
-입력받은 문자열 value 구하려면 -> myform.id.value
+입력받은 문자열 value 구하려면 -> myform.id.value	 == window.document.myform.id.value
 
 	<input type="text" name="id"></input>
 	<input type="password" name="ps"></input>
 	---
-	window.document.myform.id.value
-	myform.password.value
-	
 	//if(myform.id.value.length==0){
 	if (myform.id.value == "") {
 		alert('id가 누락됐습니다.');
 		return false;
 		}
+		
+		
 ▷ select-option
 selected value 구하려면 -> myform.fruit.value
 
@@ -328,12 +332,10 @@ selected value 구하려면 -> myform.fruit.value
 	}
 
 
+▷ radio/checkbox
+checked value 구하려면 -> myform.song[i].value
 
-	
-
-3) radio/checkbox
-선택하면 checked 붙음(checkbox는 여러개 가능)
-	<input type="radio" name="song" value="낙하">낙하
+	<input type="radio" name="song" value="낙하">낙하 ★ name의 배열이 만들어짐
 	<input type="radio" name="song" value="버터">버터
 	---
 	flag = false;
@@ -341,7 +343,7 @@ selected value 구하려면 -> myform.fruit.value
 		if(myform.song[i].checked){
 			str += myform.gender[i].value+'\n';
 			flag = true;
-			break; // checked 하나이기 때문 != checkbox ★
+			break; // checked 하나이기 때문 != checkbox(checked 여러개 가능) ★
 		}
 	}
 	
@@ -352,15 +354,7 @@ selected value 구하려면 -> myform.fruit.value
 	
 
 
-▶javascript의 주된 일: jsp 가기 전 유효성 검사
-id name 구분
-jsp  중요
-javascript 괜찮음
 
-배열X
-select 
 
-배열O
-radio
-checkbox
+
 
