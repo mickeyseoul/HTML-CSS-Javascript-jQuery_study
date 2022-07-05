@@ -261,7 +261,7 @@ str.toLowerCase()
 ----------------------------------------------------------------------------------------
 03_windowObj
 window객체 안의 함수들은 window 생략 가능
-▶window.open
+▶window.open 팝업창 만들기
 window.open("url","이름","가로 세로 크기")
 
 부모창 window.opener
@@ -271,10 +271,18 @@ window.open("url","이름","가로 세로 크기")
 
 ----------------------------------------------------------------------------------------
 04_historyObj
-▶javascript의 주된 일: jsp 가기 전 유효성 검사
+▶
+history.back() 이전 페이지
+history.go(-1)
+history.go(-2) 이전이전 페이지
+
+history.forward() 다음 페이지
+history.go(1)
+history.go(2) 다음다음 페이지
 
 -----------------------------------------------------------------------------------------
 05_form
+javascript의 주된 일: jsp 가기 전 유효성 검사
 ▶form 타입 종류
 <form name="myform" action="abc.jsp">
 1) 버튼종류
