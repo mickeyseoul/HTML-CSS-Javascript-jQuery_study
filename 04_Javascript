@@ -340,7 +340,7 @@ checked value 구하려면 -> myform.song[i].value
 	---
 	flag = false;
 	for(var i=0; i<myform.song.length;i++){
-		if(myform.song[i].checked){
+		if(myform.song[i].checked){ ★ checked가 있냐
 			str += myform.gender[i].value+'\n';
 			flag = true;
 			break; // checked 하나이기 때문 != checkbox(checked 여러개 가능) ★
