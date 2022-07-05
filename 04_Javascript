@@ -290,16 +290,36 @@ history.go(2) 다음다음 페이지
 -submit
 	<input type="button" value="버튼"></input>
 	<input type="reset" value="취소"></input>
-	<input type="submit" value="등록" onclick="return check()"></input>
+	<input type="submit" value="등록" onclick="return check()"></input> ★return 없으면 true/false 못받음
 
-2) 입력받은 value를 name으로 찾는 경우 window.name.value
+2) 입력받은 value를 name으로 찾는 경우 
 -text/password
 	<input type="text" name="id"></input>
 	<input type="password" name="ps"></input>
+	---
+	window.document.myform.id.value
+	myform.password.value
+	
 
 -radio/checkbox
-	<input type="radio" name="song" value="낙하">낙하</input>
-	선택하면 checked 붙음
+선택하면 checked 붙음(checkbox는 여러개 가능)
+	<input type="radio" name="song" value="낙하">낙하
+	<input type="radio" name="song" value="버터">버터
+	---
+	flag = false;
+	for(var i=0; i<myform.song.length;i++){
+		if(myform.song[i].checked){
+			str += myform.gender[i].value+'\n';
+			flag = true;
+			break; // checked 하나이기 때문 != checkbox ★
+		}
+	}
+	
+	if(flag == false){
+		alert('반드시 하나는 선택해야 합니다.');
+		return false;
+	}
+	
 
 2-2) 
 -select-option
@@ -308,6 +328,11 @@ history.go(2) 다음다음 페이지
 	<option value="a">apple</option>
 	<option value="o">orange</option>
 	</select>
+	---
+	if (myform.fruit.value == "") {
+		alert('반드시 선택해야합니다.');
+		return false;
+	}
 
 (2) javascript 작성시
 	function firstChange(){
