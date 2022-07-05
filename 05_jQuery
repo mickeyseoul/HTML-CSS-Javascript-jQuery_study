@@ -1,0 +1,44 @@
+DOM Document
+(document도 객체로 만든 후)
+tag를 객체로 만들어 사용
+
+jQuery도 "" '' 구분 안함 ==javascript
+
+jQuery 다운로드 사이트 
+jquery.com
+
+jQuery 함수
+ctrl+f 로 찾아보기
+
+javascript영역에 jquery 소스 넣기
+<script type="text/javascript" src="./../js/jquery.js"></script>
+<script type="text/javascript">
+</script>
+
+▶jQuery 함수
+▷ready() 
+:document 객체로 만들고 jQuery 사용위한 function 정의(실행도 같이 됨)
+모든 jQuery문은 이 안에서 사용가능
+$(document).ready(function(){ 
+
+});
+
+▷$(" ") 
+:html 태그 객체로 만들기 != $(document) 따옴표 안들어감
+따옴표 안에 css 선택자(태그,class/id,자식/자손,속성 등등) 입력
+
+
+▷.addClass(" ")
+:이미 만들어진 클래스의 css를 가져와 이용하는 경우
+
+▷.css("속성","값")
+
+▷.each() == for문
+:each()-this 짝꿍
+this는 "반복 가능한 태그" 중 each로 뽑아진 태그를 의미 함
+$("반복 가능한 태그").each(function(){ 
+$(this).text()
+})
+
+▷.text()
+
