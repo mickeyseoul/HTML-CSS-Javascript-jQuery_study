@@ -296,7 +296,7 @@ window.open("url","이름","가로 세로 크기")
 
 2-2) 
 -select-option
-(1) html 작성시
+(1) html 작성시 //select-option이 간단하게 고정된 경우 html에 써주는게 간단
 	<select name="fruit">
 	<option value="a">apple</option>
 	<option value="o">orange</option>
