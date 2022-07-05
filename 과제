@@ -130,13 +130,13 @@ Javascript
 	function buttonClose(){
 		if(isNaN(window.document.f.su1.value) ||  isNaN(f.su2.value) ){
 			alert('숫자가 아닙니다.');
-			return; //-> 창이 안 닫힘(함수 즉시 나가기 때문)
+			return; //-> 창이 안 닫힘(함수 즉시 나가기 때문) ★
 		}
 		
 		var su1 = Number(window.document.f.su1.value);
 		var su2 = Number(f.su2.value);
 		
-		var oper = window.document.f.operator.value; //select의 option중에서 선택한 value 가져옴
+		var oper = window.document.f.operator.value; //select의 option중에서 선택한 value 가져옴 ★
 		switch(oper){
 		case "더하기" : 
 			result = su1+su2;
