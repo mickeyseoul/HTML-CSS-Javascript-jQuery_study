@@ -274,7 +274,22 @@ window.open("url","이름","가로크기 세로크기 왼쪽으로부터위치 �
 부모창 window.opener
 자식창(팝업창)
 
-▶window.setInterval()
+▶window.setInterval
+window.setInterval(해야할일, 시간) :시간이 지날때마다 실행
+
+	var time = setInterval(function(){
+		var now = new Date();
+		var clock = now.toLocaleString();
+		
+		var area = document.getElementById("div태그의아이디");
+		area.innerHTML(clock);
+	}, 1000); //1000 == 1초
+	
+window.setTimeout(해야할일, 시간) :시간이 지나면 딱 한 번만 실행
+
+	setTimeout(function(){
+		window.clearInterval(time);
+	}, 10000);
 
 ----------------------------------------------------------------------------------------
 04_historyObj
