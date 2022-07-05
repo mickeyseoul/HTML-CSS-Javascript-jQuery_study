@@ -242,6 +242,13 @@ var text = f_sel[Index].text;
 
 <!-- size="10"가 보일정도로 maxlength="11"글자 내 -->
 
+html 작성시 //select-option이 간단하게 고정된 경우 html에 써주는게 간단
+	<select name="fruit">
+	<option value="a">apple</option>
+	<option value="o">orange</option>
+	</select>
+
+
 
 ▶String
 var str = "즐거운 자바스크립트 공부"; // new String(" ")
@@ -292,10 +299,24 @@ history.go(2) 다음다음 페이지
 	<input type="reset" value="취소"></input>
 	<input type="submit" value="등록" onclick="return check()"></input> ★return 없으면 true/false 못받음
 
-▷ 입력받은 value를 name으로 찾는 경우 
 
-1) select-option
-(1) html 작성시 //select-option이 간단하게 고정된 경우 html에 써주는게 간단
+▷ text/password
+입력받은 문자열 value 구하려면 -> myform.id.value
+
+	<input type="text" name="id"></input>
+	<input type="password" name="ps"></input>
+	---
+	window.document.myform.id.value
+	myform.password.value
+	
+	//if(myform.id.value.length==0){
+	if (myform.id.value == "") {
+		alert('id가 누락됐습니다.');
+		return false;
+		}
+▷ select-option
+selected value 구하려면 -> myform.fruit.value
+
 	<select name="fruit">
 	<option value="a">apple</option>
 	<option value="o">orange</option>
@@ -306,21 +327,8 @@ history.go(2) 다음다음 페이지
 		return false;
 	}
 
-(2) javascript 작성시
-	function firstChange(){
-		var f = window.myform.first;
-		f.options[0] = new Option("선택"); //value값 지정
-	}
-	---
-	<select id="fisrt" onchage="firstChange()"></select>
 
 
-2) text/password
-	<input type="text" name="id"></input>
-	<input type="password" name="ps"></input>
-	---
-	window.document.myform.id.value
-	myform.password.value
 	
 
 3) radio/checkbox
