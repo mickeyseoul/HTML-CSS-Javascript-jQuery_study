@@ -282,7 +282,6 @@ history.go(2) 다음다음 페이지
 
 -----------------------------------------------------------------------------------------
 05_form
-javascript의 주된 일: jsp 가기 전 유효성 검사
 ▶form 타입 종류
 <form name="myform" action="abc.jsp">
 1) 버튼종류
@@ -319,5 +318,15 @@ javascript의 주된 일: jsp 가기 전 유효성 검사
 	<select id="fisrt" onchage="firstChange()"></select>
 	
 	
+▶javascript의 주된 일: jsp 가기 전 유효성 검사
+id name 구분
+jsp  중요
+javascript 괜찮음
 
+배열X
+select 
+
+배열O
+radio
+checkbox
 
