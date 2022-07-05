@@ -255,8 +255,9 @@ var str = "즐거운 자바스크립트 공부"; // new String(" ")
 str.charAt(4) //자
 str.indexOf("자바") //4
 str.indexOf("HTML") //-1
+
 str.slice(4,6) //자바
-str.slice(4,-3) //맨뒤에서부터 => 자바스크립트
+str.slice(4,-3) //맨뒤에서부터 => 자바스크립트 	!=substring() 음수 못씀
 slice(4) //자바스크립트 공부
 
 str.substring(4,6) //자바
