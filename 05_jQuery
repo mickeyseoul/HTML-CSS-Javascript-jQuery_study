@@ -35,7 +35,7 @@ ctrl+f 로 찾아보기
 
 ▷.css("속성","값")
 
-▷.each() == for문
+▷.each(function(){}) == for문
 :each()-this 짝꿍
 this는 "반복 가능한 태그" 중 each로 뽑아진 태그를 의미 함
 
