@@ -174,3 +174,79 @@ Javascript
 	</form>
 </body>
 </html>
+
+
+-----------------------------------------------------------------------------------------
+jQuery
+ch04
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM 요소 생성 후 원하는 요소에 추가</title>
+<style type="text/css">
+	img{
+		padding:3px;
+	}
+</style>
+<script type="text/javascript" src="./../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+		$('#btnCreate').click(function(){
+			var row = $('#row').val(); //val() 값을 가져오는 함수
+			if(isNaN(row)){
+				alert('정수만 입력하세요');
+			}
+			
+			var arr = new Array("a.jpg","b.jpg","c.jpg","d.jpg","e.jpg");
+			
+			/* $(arr).each(function(index,value){
+				$(this).
+			}); */
+			
+			
+			//테이블 작업
+			$('#lblTable').append('<table border="2px solid black"></table>');
+			//.attr('border','2px solid red');
+			
+			var row = Number($('#row').val());
+			var col = Number($('#col').val());
+			//alert(row+","+col);
+			
+			for(var i=0;i<row;i++){
+				$('table').append("<tr></tr>");
+				//alert('tr');
+				for(var j=0;j<col;j++){
+					$('tr').append('<td>'+ j +'</td>');
+					//alert('td');
+				}
+			}
+			
+			
+			
+		});//click
+		
+	});
+</script>
+</head>
+<body>
+
+	<input type="text" id="row" value="2" size="4" />행 <!-- tr -->
+	<input type="text" id="col" value="3" size="4" />열 <!-- td -->
+	<input type="button" id="btnCreate" value="테이블 동적 생성" />
+
+	<div id="lblTable">
+		<!-- 테이블 -->
+	</div>
+</body>
+</html>
+<!-- 
+문자 잘 못 넣은 경우도 alert잡기
+0~4 Math.random()
+isNaN()
+append()
+ -->
+
+
