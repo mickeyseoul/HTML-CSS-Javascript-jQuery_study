@@ -30,7 +30,7 @@ ctrl+f 로 찾아보기
  따옴표 안에 css 선택자(태그,class/id,자식/자손,속성 등등) 입력
 
 
-▷.addClass(" ")
+▷.addClass(" ") /removeClass(" ")
 :이미 만들어진 클래스의 css를 가져와 이용하는 경우
 
 ▷.css("속성","값")
@@ -48,6 +48,19 @@ this는 "반복 가능한 태그" 중 each로 뽑아진 태그를 의미 함
 
 ▷.append()
 :태그에 text를 넣는 함수
+
+
+
+1부터 시작
+nth-child(index)
+first 맨앞
+last 맨뒤
+2n :2의 배수 == 짝수 0 2 4 ..
+2n+1 == 홀수 1 3 5 ..
+
+0부터 시작
+even,odd
+eq(index)		cf) .eq(index) 함수도 있음
 
 
 -----------------------------------------------------------------------------
@@ -128,19 +141,18 @@ $('#fruit_list').append('<li>'+index+':'+value+'</li>');
 }); 
 
 ▶
-append('추가할 내용') :뒤의 자식으로 추가
+append('추가할 내용') :뒤의 자식으로 추가    차례로 뒤로 누적
 appendTo('타겟')
 
-preppend('추가할 내용') :앞의 자식으로 추가
+preppend('추가할 내용') :앞의 자식으로 추가  차례로 앞으로 누적
 preppendTo('타겟')
 
 ▶
-after('추가할 내용') :뒤의 형제로 들어감
-insertAfter('타겟')
-
-before('추가할 내용') :앞의 형제로 들어감
+before('추가할 내용') :객체 앞으로 형제로 들어감
 insertBefore('타겟')
 
+after('추가할 내용') :객체 뒤로 형제로 들어감
+insertAfter('타겟')
 
 ▶
 empty() 
