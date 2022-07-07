@@ -6,8 +6,8 @@ tag를 객체로 만들어 사용***
 document도 객체로 만든 후 사용
 -
 $(" ") 
-:html 태그를 객체로 만들기 		!= $(document) 따옴표 안들어감
- 따옴표 안에 css 선택자(태그,class/id,자식/자손,속성 등등) 입력
+:html 태그를 객체로 만들기 		
+ 따옴표 안에 css 선택자(태그,class/id,자식/자손,속성 등등) 입력	!= $(document) 변수 등은 따옴표 안들어감
 -
 jQuery 다운로드 사이트 
 jquery.com
@@ -275,9 +275,10 @@ dblClick(function(){})
 select(function(){})
 
 ------------------------------------------------------------------------------------------
-ch07
-▶
-객체 만들기
+ch07 외부파일/Json파일 xtml파일 불러와 사용하기
+
+▶직접 객체 만들기
+1) 객체 만들기
 (1)
 var person1 = new Object();
 person1.name = '우기'; //멤버변수 별도의 선언없이 선언 동시에 바로 초기화해서 사용
@@ -300,7 +301,7 @@ math : 100
 }
 };
 
-객체 배열 만들기
+2) 객체 배열 만들기
 (1)
 var person = new Array(person1,person2); //기존 객체 활용
 
@@ -317,57 +318,72 @@ var person = new Array( //배열에 객체 직접 만들어서 넣기
 );
 
 
-▶
+▶load()
 load('불러올파일')
-load('불러올파일 원하는곳만')
+$('p').load('menu.html');
+
+load('불러올파일 원하는곳만') //공백 주의
+$('p').load('menu.html li');
 
 
-ajax
+▶ajax
 :화면의 일부만 변경할 때 사용 != 전체 새로고침 location.reload()
 아이디 중복확인의 경우 사용
-$.ajax({
-url : "", // 요청 url
-dataType : "", // 응답타입(반환타입)
-success : function(data){ // 응답이 왔을 때(변수설정)
+		$.ajax({
+			url : "", // 요청 url
+			dataType : "", // 응답타입(반환타입)
+			success : function(data){ // 응답이 왔을 때(변수설정)
 
-},
-error : function(){ // 응답이 오지 않았을 때
+			},
+			error : function(){ // 응답이 오지 않았을 때
 
-}
-});
+			}
+			});
 
 ▶getJSON() jason 파일 불러오기
 ▷jason 파일
+: 데이터들이가 각각 객체로 보기 좋게 정리되어 있음
 [
-{
+{ //객체1
 "id": "1", 
     "name": "레몬"
 {,
-{
+{ //객체2
 "id": "2",
 "name": "키위"
 }
 ]
 ▷getJSON('요청url',success)
-$.getJSON('item.json',function(data,textStatus){
-alert(data);
-//[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
-//item.json파일에 있는 모든 객체 가져옴
-alert(textStatus); //success
-});
+		$.getJSON('item.json',function(data,textStatus){
+			alert(data);
+			//[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
+			//item.json파일에 있는 모든 객체 가져옴
+			alert(textStatus); //success
+			
+			$.each(data,function(){
+				$('table').append("<tr>"
+				+"<td>"+this.id+"</td>"		
+				+"<td>"+this.name+"</td>"		
+				+"<td>"+this.price+"</td>"		
+				+"<td>"+this.description+"</td>"
+				+"</tr>"
+				);
+			});
+		});
 
 ▶get() xtml 파일 불러오기
-▷xtml 파일
-xtml Expensible Markup
+▷xtml 파일 
+:xtml Expensible Markup
 html 태그,속성 등등 직접 만들어 사용
 ▷get()
-$.get("item.xml",function(data){ 
-alert(data); //[object XMLDocument] 최상위 태그하나만 가져옴 <items>
-$(data).find("최상위태그의 자손태그").each(function(){
+		$.get("item.xml",function(data){ 
+			alert(data); //[object XMLDocument] 최상위 태그하나만 가져옴 <items>
+			
+			$(data).find("자손태그").each(function(){
 
-});
+			});
 
-});
+		});
 
 
 
