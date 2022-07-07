@@ -187,6 +187,10 @@ chap5 이벤트 함수 묶어서 사용하기/ 이벤트 함수 이벤트 처리
 ▶bind('click mouseover',function(){}) / unbind()
 :이벤트함수를 묶어서 사용할 때 
 -
+		$('img').click(function(){});
+		==
+		$('img').bind('click',function(){});
+-
 		$('img').bind('click mouseover',function(){
 			alert('1');
 		});
@@ -230,15 +234,38 @@ chap5 이벤트 함수 묶어서 사용하기/ 이벤트 함수 이벤트 처리
 
 
 -----------------------------------------------------------------------------------------
-ch06
-함수
-show() / hide()
+ch06 이벤트 함수
 
-fadeIn() / fadeOut() 천천히
+▶show() / hide()	cf)toggle() :나타나기 + 사라지기
+show('slow')
+show(3000)
+show(3000,function(){})
 
-mouseOver() / mouseOut()
+▶fadeIn() / fadeOut() 천천히
+fadeIn(3000,function(){})
 
-animate({ : },2000)
+▶mouseOver() / mouseOut()
+
+▶animate({ : },2000)
+-
+		var i=-1;
+		$('.leftbtn').bind('click',function(){
+				if(i == 1){
+					alert('마지막 이미지입니다.');
+					return;
+				}
+				$('#firstimage').animate({marginLeft : '-=205px'},2000); //왼쪽마진 205만큼 줄여라
+				i++;
+		});
+			
+		$('rightbtn').bind('click',function(){
+				if(i == -1){
+					alert('마지막 이미지입니다.');
+					return;
+				}
+				$('thirdimage').animate({marginLeft : '+=205px'},2000); //왼쪽마진 205만큼 늘려라
+				i--;
+		});
 
 
 ------------------------------------------------------------------------------------------
