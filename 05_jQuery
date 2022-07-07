@@ -1,6 +1,10 @@
 DOM Document
 (document도 객체로 만든 후)
-tag를 객체로 만들어 사용
+tag를 객체로 만들어 사용 ***
+
+▷$(" ") 
+:html 태그 객체로 만들기 != $(document) 따옴표 안들어감
+ 따옴표 안에 css 선택자(태그,class/id,자식/자손,속성 등등) 입력
 
 jQuery도 "" '' 구분 안함 ==javascript
 
@@ -24,11 +28,6 @@ ctrl+f 로 찾아보기
   $(document).ready(function(){ 
 
   });
-
-▷$(" ") 
-:html 태그 객체로 만들기 != $(document) 따옴표 안들어감
- 따옴표 안에 css 선택자(태그,class/id,자식/자손,속성 등등) 입력
-
 
 ▷.addClass(" ") /removeClass(" ")
 :이미 만들어진 클래스의 css를 가져와 이용하는 경우
