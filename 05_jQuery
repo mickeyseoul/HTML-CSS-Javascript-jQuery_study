@@ -268,6 +268,12 @@ fadeIn(3000,function(){})
 		});
 
 
+그 외의 이벤트 함수
+ready(function(){})
+click(function(){})
+dblClick(function(){})
+select(function(){})
+
 ------------------------------------------------------------------------------------------
 ch07
 ▶
