@@ -280,7 +280,7 @@ ch07
 객체 만들기
 (1)
 var person1 = new Object();
-person1.name = '우기';
+person1.name = '우기'; //멤버변수 별도의 선언없이 선언 동시에 바로 초기화해서 사용
 
 var grade = new Object();
 grade.kor = 89;
@@ -297,7 +297,7 @@ grade : {
 kor : 50,
 eng : 30,
 math : 100
-				}
+}
 };
 
 객체 배열 만들기
@@ -310,9 +310,9 @@ var person = [person1,person2]; //기존 객체 활용
 (3)
 var person = new Array( //배열에 객체 직접 만들어서 넣기
 {
-
+객체1
 },{
-
+객체2
 }
 );
 
