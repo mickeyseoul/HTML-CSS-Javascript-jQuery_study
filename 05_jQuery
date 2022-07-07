@@ -180,7 +180,109 @@ append
 html
 태그 추가(누적안됨)
 
-nth-child 정리하기
+ch06
+함수
+show() / hide()
+
+fadeIn() / fadeOut() 천천히
+
+mouseOver() / mouseOut()
+
+animate({ : },2000)
+
+
+
+ch07
+▶
+객체 만들기
+(1)
+var person1 = new Object();
+person1.name = '우기';
+
+(2)
+var person1 = {
+name : '아이유',
+age : 30,
+birthDate : new Date(2000,1,22),
+				
+grade : {
+kor : 50,
+eng : 30,
+math : 100
+				}
+};
+
+객체 배열 만들기
+(1)
+var person = new Array(person1,person2); //기존 객체 활용
+
+(2)
+var person = [person1,person2]; //기존 객체 활용
+
+(3)
+var person = new Array( //배열에 객체 직접 만들어서 넣기
+{
+
+},{
+
+}
+);
+
+
+▶
+load('불러올파일')
+load('불러올파일 원하는곳만')
+
+
+ajax
+:화면의 일부만 변경할 때 사용 != 전체 새로고침 location.reload()
+아이디 중복확인의 경우 사용
+$.ajax({
+url : "", // 요청 url
+dataType : "", // 응답타입(반환타입)
+success : function(data){ // 응답이 왔을 때(변수설정)
+
+},
+error : function(){ // 응답이 오지 않았을 때
+
+}
+});
+
+▶getJSON() jason 파일 불러오기
+▷jason 파일
+[
+{
+"id": "1", 
+    "name": "레몬"
+{,
+{
+"id": "2",
+"name": "키위"
+}
+]
+▷getJSON('요청url',success)
+$.getJSON('item.json',function(data,textStatus){
+alert(data);
+//[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
+//item.json파일에 있는 모든 객체 가져옴
+alert(textStatus); //success
+});
+
+▶get() xtml 파일 불러오기
+▷xtml 파일
+xtml Expensible Markup
+html 태그,속성 등등 직접 만들어 사용
+▷get()
+$.get("item.xml",function(data){ 
+alert(data); //[object XMLDocument] 최상위 태그하나만 가져옴 <items>
+$(data).find("최상위태그의 자손태그").each(function(){
+
+});
+
+});
+
+
+
 
 
 
