@@ -385,8 +385,17 @@ html 태그,속성 등등 직접 만들어 사용
 
 		});
 
+-----------------------------------------------------------------------------------------------
+ch08 jQuery 플러그인
 
+기본 jQuery
+src="../js/jquery.js" 
 
+▶jQuery 플러그인
+src="../js/jquery.rotator.js"
+src="../js/jquery.magnify-1.0.2.js"
+
+jQuery 플러그인 다양함
 
 
 
