@@ -1,0 +1,31 @@
+JSP
+Java Server Page
+
+▶Dynamic Web Project 프로젝트 사용할때 기본 설정
+1)
+UTF-8설정
+window-preference-web-jsp Files-UTF-8로 바꾸기 적용
+
+2)
+Apachi 네트워크 설정
+(1)JSP파일 Run 실행후-Apachi에서 tomcat9.0클릭 후-browser에 tomcat 폴더 클릭
+(2)자바 맨 밑에 Servers 클릭-Tomcat v9.0 Server at localhost 더블클릭-Tomcats admim port에 Port Number 직접 네자리 입력
+
+3)주의
+동시에 두개이상 Dynamic Web Project를 사용하는 워크스페이스 띄어져있을때
+안쓰는 것 server-stop 해 놓아야 함
+
+▶JSP사용 요건
+Webapp폴더에
+lib폴더 만든 후
+tomcat9.0 파일탐색기-lib 폴더-servlet-api.jar 가져다 넣기
+
+------------------------------------------------------------------
+01_basic
+
+▶JSP 태그
+<%@  %> 지시어(page, include, taglib) JSP 전체적인 페이지에 대한 정보
+<%!  %> 선언문 :메서드 정의
+<%  %> 스크립트릿 :일반적인 자바코드 (변수선언 제어문 반복문)
+<%=  %> 표현식 :변수출력, 리턴값이 있는 메서드 호출할 때 
+<%--  --%> 주석
