@@ -34,3 +34,39 @@ tomcat9.0 파일탐색기-lib 폴더-servlet-api.jar 가져다 넣기
 <%  %> 스크립트릿 :일반적인 자바코드 (변수선언 제어문 반복문)
 <%=  %> 표현식 :변수출력, 리턴값이 있는 메서드 호출할 때 
 <%--  --%> 주석
+
+nclude 지시어 : 외부파일 복사 붙여넣기 
+<%@ include file="Ex07_bottom.jsp" %>
+include 액션태그 : 
+
+▶내장객체
+JSP에 자동으로 만들어져 있는 객체 != 클래스가 이미 만들어져 있는 것과 다름
+
+종류
+out :웹 브라우저와의 연결을 담당하는 객체
+out.print()
+request :form의 요청에 응답하여 name의 값을 가져옴
+request.getParameter()
+
+----------------------------------------------------------------------------
+02_request
+
+▶속성 name
+JSP에서 필수적 != jQuery
+
+▶속성 method
+<form action="Ex01_result.jsp" method="get"> 
+기본값 get 
+:url에 넘어가는 값 보임 -> 보안에 취약, 속도 빠름 데이터 256byte가 한계
+한글 안깨짐
+Ex01_result.jsp?name=kim&age=12
+
+post 
+:url에 넘어가는 값 안보임 -> 보안에 좋음
+한글 깨짐 -> result 페이지에 처리 필수 request.setCharacterEncoding("UTF-8");
+
+▶내장객체 request
+:요청한 쪽에서 정보가 담김
+
+
+
