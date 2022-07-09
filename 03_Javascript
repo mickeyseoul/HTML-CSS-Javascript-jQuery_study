@@ -7,8 +7,15 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 
 ▷Web 영역
 영역자체가 객체라 객체에 따른 함수 사용
-window영역
+window영역()
+	window.document...
+	window.open
 document 영역
+	document.out()
+	document.getElementById()
+	-
+		var area = document.getElementById("result"); ★
+		area.innerHTML = "선택한 메뉴는<br>"+f_selValue+","+s_selValue+"입니다.";
 form 영역
 history 영역
 location 주소창 영역
@@ -19,6 +26,7 @@ location 주소창 영역
 ●01_Basic
 ●02_implicitObj
 ●03_windowObj
+●04_historyObj
 ●05_form
 
 ------------------------------------------------------------------------------------------
@@ -197,19 +205,7 @@ Math.floor(Math.random()*45+1)
 
 
 ▶Option("text","value")
-1) html
-<form>-<select>-<option> 한 쌍
-선택시 name에 selected된 value값이 들어감
--
-	<form>
-	    <select name="f"> 
-		    <option value="a">apple</option>
-		    <option selected value="g">grape</option>  <!-- selected="selected" 기본값으로 선택되게 하는 속성 -->
-		    <option value="o">orange</option>
-	    </select>
-	</form>
-
-2) javascript
+<select>의 option을 javascript 함수 option()으로  넣기
 ▷주요 함수
 myform.first.option[0] = new Option("선택");	//option에 value값 넣기
 myform.first.selectedIndex
@@ -259,6 +255,10 @@ javascript로 <select>의 option 설정하기
 
 <!-- size="10"가 보일정도로 maxlength="11"글자 내 -->
 
+cf) html
+<form>-<select>-<option> 한 쌍
+선택시 name에 selected된 value값이 들어감
+
 
 ▶String
 var str = "즐거운 자바스크립트 공부"; == new String("즐거운 자바스크립트 공부")
@@ -303,7 +303,7 @@ window.setTimeout(해야할일, 시간) :시간이 지나면 딱 한 번만 실�
 	}, 10000);
 
 ----------------------------------------------------------------------------------------
-04_historyObj
+●04_historyObj
 ▶
 history.back() 이전 페이지
 history.go(-1)
@@ -348,8 +348,8 @@ id name 구분
 selected value 구하려면 -> myform.fruit.value
 
 	<select name="fruit">
-	<option value="a">apple</option>
-	<option value="o">orange</option>
+		<option value="a">apple</option>
+		<option value="o">orange</option>
 	</select>
 	---
 	if (myform.fruit.value == "") {
