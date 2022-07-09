@@ -20,6 +20,7 @@ Hyper Text Markup Language
 <p> 단락만들기
 <br> 줄바꾸기
 <hr> 수평 줄 넣기
+<div>
 -
   <h1>h1크기</h1>
   <h2>h2크기</h2>
@@ -37,6 +38,7 @@ Hyper Text Markup Language
 <i>
 <span> 줄바꿈없이 영역 묶기 //딱 그 글자크기만큼만 차지
 <u>
+<img>	cf)인라인 요소에는 weight/height 속성이 없지만 img는 있음
 
 
 ▶font 관련 태그
