@@ -25,6 +25,7 @@ Hyper Text Markup Language
 ▶a 태그를 통한 하이퍼링크
 ▶iframe 태그
 ▶table 태그
+▶form 태그
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ▶블럭 태그 
@@ -211,5 +212,21 @@ valign	="center"	<!-- Vertical Align -->
       <td colspan="2" valign="top">2</td> <!-- 좌에서 좌우로 합침 -->
     </tr>
  </table>
+
+
+▶form 태그
+<form>
+<input>
+type 	="button"
+	="submit"
+	="text"
+	="radio"	checked = "checked"
+	="checkbox"	checked = "checked"
+<select>
+<option>		slected = "selected"
+
+
+
+
 
 
