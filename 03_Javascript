@@ -171,17 +171,20 @@ now.getSeconds()
 
 
 ▶Math 함수
-Math.max(10,30,2,50)
+Math.max(10,30,2,50)	!=java는 두개씩만 비교
 Math.min(10,30,2,50)
-Math.round(1.7) //2
-Math.round(1.3) //1
-Math.ceil(1.3) //2
-Math.floor(1.7) //1 == parseInt(1.7)
+Math.round(1.7)	2
+Math.round(1.3)	1
+Math.ceil(1.3)	2
+Math.floor(1.7)	1 == parseInt(1.7)
 Math.floor(Math.random()*45+1)
 
 
-▶Option
+▶Option("text","value")
 1) html
+<form>-<select>-<option> 한 쌍
+선택시 name에 selected된 value값이 들어감
+-
 	<form>
 	    <select name="f"> 
 		    <option value="a">apple</option>
@@ -190,20 +193,18 @@ Math.floor(Math.random()*45+1)
 	    </select>
 	</form>
 
-<!-- form-select-option 한쌍 -->
-<!-- 선택시에 name에 vlaue가 들어감 -->
-
 2) javascript
 ▷주요 함수
-f_sel = myform.first;
-f_sel.option[0] = new Option("선택");
-var Index = f_sel.selectedIndex;
-var value = f_sel[Index].value;
-var text = f_sel[Index].text;
+myform.first.option[0] = new Option("선택");	//option에 value값 넣기
+myform.first.selectedIndex
+myform.first[index].value
+myform.first.text
 
+javascript로 <select>의 option 설정하기
+-
 	<script type="text/javascript">
 	function init(){
-		var f_sel = myform.first; //form없이 select만 써주면 안됨 형식임 ★
+		var f_sel = myform.first; //form없이 select만 써주면 안됨 형식임
 		f_sel.options[0] = new Option("선택"); //option배열 설정 ★
 
 		for(var i=0;i<f_arr.length;i++){
@@ -215,28 +216,6 @@ var text = f_sel[Index].text;
 		s_sel.options[0] = new Option("선택");
 	}//init()
 	
-	function firstChange(){
-		f_sel = myform.first;
-		s_sel = myform.second;
-		
-		f_selIndex = f_sel.selectedIndex; ★
-		f_selValue = f_sel[f_selIndex].value; ★
-		f_selText = f_sel[f_selIndex].text; ★
-		
-		//alert(f_selIndex+","+f_selValue+","+f_selText);
-		//1,한식,한식 => 0행
-		
-		//2번째 select에 기존 option 지우기(지우지 않으면 그 전의 선택 그대로 남아있음)
-		for(var i=s_sel.length-1; i>0; i--){ //끝에서 부터 지워야 함(앞에서 부터 지우면 당겨짐)
-			s_sel.option[i] = null;
-		}
-		
-		//2번째 select에 option 넣는 작업
-		for(var i=0;i<s_arr[f_selIndex-1].length;i++){
-			s_sel.options[i+1] = new Option(s_arr[f_selIndex-1][i]);
-		}
-		
-	}//fisrtchange
 	
 	function secondChange(){
 		f_sel = myform.first;
@@ -264,26 +243,20 @@ var text = f_sel[Index].text;
 
 <!-- size="10"가 보일정도로 maxlength="11"글자 내 -->
 
-html 작성시 //select-option이 간단하게 고정된 경우 html에 써주는게 간단
-	<select name="fruit">
-	<option value="a">apple</option>
-	<option value="o">orange</option>
-	</select>
-
 
 
 ▶String
-var str = "즐거운 자바스크립트 공부"; // new String(" ")
-str.charAt(4) //자
-str.indexOf("자바") //4
-str.indexOf("HTML") //-1
+var str = "즐거운 자바스크립트 공부"; == new String("즐거운 자바스크립트 공부")
+str.charAt(4)		자
+str.indexOf("자바")      4
+str.indexOf("HTML")	없으면 -1
 
-str.slice(4,6) //자바
-str.slice(4,-3) //맨뒤에서부터 => 자바스크립트 	!=substring() 음수 못씀
-slice(4) //자바스크립트 공부
+str.slice(4,6)자바
+str.slice(4,-3)맨뒤에서부터 => 자바스크립트 	!=substring() 음수 못씀
+slice(4)자바스크립트 공부
 
-str.substring(4,6) //자바
-str.substr(4,6) //4부터 6글자가져옴 =>자바스크립트
+str.substring(4,6)자바
+str.substr(4,6)4부터 6글자가져옴 =>자바스크립트
 
 str.toLowerCase()
 str.toLowerCase()
