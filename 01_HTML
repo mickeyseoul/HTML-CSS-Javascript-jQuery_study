@@ -16,11 +16,11 @@ Hyper Text Markup Language
 
 
 ▶블럭요소 :텍스트를 덩어리로 묶어주는 태그 //선택한 텍스트 글자에만 적용되는 것이 아니라, 텍스트가 포함된 블록 전체에 적용됨
-<hn> h1~h6 제목 표시하기 그줄 다 차지 
+<h1> h1~h6 제목 표시하기 그줄 다 차지 
 <p> 단락만들기
 <br> 줄바꾸기
 <hr> 수평 줄 넣기
-
+-
   <h1>h1크기</h1>
   <h2>h2크기</h2>
   <h3>h3크기</h3>
@@ -46,7 +46,7 @@ Hyper Text Markup Language
 <em> 이탤릭체
 <i>
 <u> 밑줄
-
+-
   <h1 id="Toy3"><b><font color="green" size="10" face="궁서체">Toy3부분입니다.</font></b></h1>
 
 ▷속성
@@ -59,36 +59,34 @@ color
 ▶목록을 만드는 태그
 <ul>,<li> 순서 없는 목록 만들기   ul: Unordered list
 <ol>,<li> 순서 있는 목록 만들기   ol: Ordered list 
-<dl>,<dt>,<dd> 설명 목록 만들기
-
-<ul type="circle"> <!-- 안쓰면 기본 타입 disc -->
+<dl>,<dt>,<dd> 설명 목록 만들기(용어정의)
+-
+ <ul type="circle"> <!-- 안쓰면 기본 타입 disc -->
     <li>html</li>
     <li>css</li>
     <li>javascript</li>
     <li>jQuery</li>
  </ul>
- 
- 용어정의
+-
   <dl>
-    <dt>HTML</dt>
-    <dd>HTML은 Hyper Text Markup Language의 약자입니다.</dd>
+    <dt>HTML</dt> <!-- Definition Title -->
+    <dd>HTML은 Hyper Text Markup Language의 약자입니다.</dd> <!-- Definition Data -->
   </dl>
  
- ▷속성
+▷속성
 <ul>
-type	="disc" 기본
-	circle
+type	"disc" 기본
+	"circle"
 <ol>
-type	="1" 기본
+type	"1" 기본
  
 
 ▶img
-  <figure>
-		<figcaption><h3>cafe1.jpg 입니다.</h3></figcaption>
-		<img src=".\images\cafe1.jpg" width="300" heigth="200" title="카페 이미지 입니다."
-		alt="우리동네 카페"> <!-- .\ :생략가능 현재위치(webapp)\) 나타냄 -->
-		</img> <!-- 닫는tag생략가능(여는 것만 있어도 상관없음) -->
-	</figure>
+-
+  <figure> <!-- 생략가능 -->
+	<figcaption><h3>cafe1.jpg 입니다.</h3></figcaption>
+	<img src=".\images\cafe1.jpg" width="300" heigth="200" title="카페 이미지 입니다." alt="우리동네 카페"></img> <!-- 닫는tag생략가능 -->
+  </figure>
 
 .\ 현재 작업하고있는 폴더 지칭
 
@@ -96,15 +94,16 @@ type	="1" 기본
 <img>
 src
 title :이미지에 마우스 가져다대면 나타나는 문자열
-alt :이미지를 잘 못 가져왔을때 대신하는 문자열
+alt :이미지를 못 가져왔을때 대신하는 문자열
 
 
 ▶audio/vedeo
+-
   <audio>
     <source src="./media/music.mp3"> <!-- Safari, Chrome -->
     <source src="media/music.ogg"> <!-- FireFox, Opera -->
   </audio>
-
+-
   <video width="350" height="250" controls autopaly loop=loop> <!-- 속성과 값이 같으면 생략 가능*** -->
     <source src=".\media\myMovie.mp4">
     <source src="media\myMovie.ogv">
@@ -118,16 +117,18 @@ loop
 
 
 ▶a 태그를 통한 하이퍼링크
+-
 <a href=" ">다음</a>
 <a href=" "><img src=" "></a>
 
 
 ▷속성
 <a>
-href
-href	="#" 해당 페이지 맨위로 이동하기/#뒤에 붙은 부분으로 이동하기
-target	="_blank"" 새로운 창으로 연결시킴
-	_self 기본값 기존창에서 연결
+href	="url"
+	="#" 해당 페이지 맨위로 이동하기
+	="선택자"
+target	="_blank" 새로운 창으로 연결시킴
+	="_self" 기본값 기존창에서 연결
 
 
 ▶iframe
