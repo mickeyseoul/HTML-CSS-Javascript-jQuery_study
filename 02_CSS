@@ -192,7 +192,7 @@ id 선택자
 
 
 --------------------------------------------------------------------------------------------------------------------------------
-▶chap3 속성
+▶chap 03 속성
 1) font
 -
 	<style type="text/css">
@@ -304,11 +304,55 @@ margin	:p영역 바깥쪽 여백 설정	trbl순서
 	</style>
 
 --------------------------------------------------------------------------------------------------------------------------------------
-▶chap 4 CSS 포지셔닝 속성
+▶chap 04 CSS 포지셔닝 속성
+
 1) position
+:웹 문서 안의 요소들을 자유자재로 배치해 주는 속성
+
+요소
+static 	  기본값, 문서의 흐름에 맞게 배치, 위치 조정 불가능
+relative  자연스럽게 원래 있던자리에서 상대적으로, 위치 지정 가능
+absolute  위치 지정(좌표 안쓰면 겹침)
+fixed	  위치 지정(좌표 안쓰면 겹침), 확대되었을때 위치가 스크롤바에 의해서 바뀌거나 하지 않음
+
+위치 조정
+top bottom left right
+-
+	<style type="text/css">
+		.div_block {
+			width : 150px;
+			height : 150px;
+			position : absolute; 
+		}
+
+		.div_block:first-child {
+			border: 1px solid black;
+			left:30px; /* 왼쪽에서 이만큼 떨어진곳에 위치 */
+			top:30px; /* 위에서 이만큼 떨어진곳에 위치 */
+		} 
+
+		.div_block:nth-child(2) {
+			border: 1px solid blue;
+			left:200px;
+			top:30px;
+		}
+
+		.div_block:last-child {
+			border: 1px solid red;
+			left:370px;
+			top:30px;
+		}
+	</style>
+
+	<body>
+		<div class="div_block">검은색</div>
+		<div class="div_block">노란색</div>
+		<div class="div_block">빨간색</div>
+	</body>
+
 
 2) float
-이미지를 글과 같은 선상에 오른쪽/왼쪽 띄우기
+:이미지를 글과 같은 선상에 오른쪽/왼쪽 띄우기
 -
 	.floatLeft{
 			float: right; /* 이미지 오른쪽에 띄우기 */
@@ -321,7 +365,7 @@ margin	:p영역 바깥쪽 여백 설정	trbl순서
 	}
 
 3) display
-반복되는 요소들 display 어떻게 할 것인가
+:반복되는 요소들 display 어떻게 할 것인가
 이미지 정렬
 -
 	img{
@@ -330,7 +374,7 @@ margin	:p영역 바깥쪽 여백 설정	trbl순서
 	}
 
 4) column
-기사형식으로 문단 나누기
+:기사형식으로 문단 나누기
 -
 	#bookPart{ /* div */
 			width : 850px;
