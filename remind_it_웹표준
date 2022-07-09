@@ -1,6 +1,16 @@
-HTML	구조	   속성="값"
-CSS	  디자인   속성:값
+▶
+html 구조
+css 디자인
+javascript 이벤트처리
+jQuery 이벤트처리
 
-Javascript
-큰 따옴표 작은 따옴표 구분 X
-문자열 비교 ==로 가능 != java의 .equals
+▶
+HTM 속성="값"
+CSS 속성:값
+
+▶
+Javascript/jQuery
+큰 따옴표와 작은 따옴표 구분 X
+문자열 비교 ==로 가능   != java의 .equals
+
+
