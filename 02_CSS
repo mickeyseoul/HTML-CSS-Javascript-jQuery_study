@@ -70,18 +70,22 @@ CSS영역
 
 ----------------------------------------------------------------------------------------------------------------------------------
 ▶chap 02 선택자
-선택자 우선순위
+▷선택자 우선순위
 !important > 인라인 스타일 > 클래스/속성/가상 > 아이디 > 태그 > 전체
 
-선택자 정의하기
-▷태그 선택자
+▷선택자 정의하기
+1) 태그 선택자
+-
+	<style type="text/css">
 	h3{
 		background-color: #000;
 		color: #fff;
 		width: 50%
 	}
+	</style>
 	
-	/*nth-child*/
+태그:nth-child(부모입장에서 몇번째 자식인 태그)
+-
 	<style type="text/css">
 	/* 첫번째 li 태그  */
 	li:first-child{ /* 첫번째 first-child 마지막 last-child */
@@ -97,8 +101,8 @@ CSS영역
 	}
 	</style>
 
-▷class/id 선택자
-1)class 선택자 :별칭설정 두군데 이상 사용할 때
+2) class/id 선택자
+class 선택자 :별칭설정 두군데 이상 사용할 때
 -
 	<style type="text/css">
 	  .cook1{
@@ -107,7 +111,7 @@ CSS영역
 		}
 	</style>
 
-2)id 선택자 
+id 선택자 
 :별칭설정 주로 한군데 사용할 때
 -
 	<style type="text/css">
@@ -117,7 +121,7 @@ CSS영역
 	      }
 	</style>
 
-▷속성 선택자 
+3) 속성 선택자 
 :속성을 이용하여 선택자를 정의
 -
 	a[target]{ /* a 태그에 target 속성 있는 곳만 */
@@ -144,7 +148,7 @@ CSS영역
 	}
 	</style>
 
-▷자식/자손 선택자
+4) 자식/자손 선택자
 1)자식
 -
 	/* body>div>h2 */
@@ -159,7 +163,7 @@ CSS영역
 		color: red;
 	}
 
-▷가상클래스 선택자 pseudo
+5) 가상클래스 선택자 pseudo
 -
 	a:hover{
 	background-color: #cf3; /* 마우스 올리면 적용됨 */ 
@@ -172,14 +176,14 @@ CSS영역
 	input[type="radio"]:checked
 	input[type="checkbox"]:checked
 
-▷전체 선택자
+6) 전체 선택자
 -
 	*{
 	    background-color:yellow;
 	    margin: 20px;
 	 }
 
-▷그룹선택자
+7) 그룹선택자
 -
 	 h1,h2,h3,h4{
 	 		 ont-size: 20px;
@@ -190,6 +194,7 @@ CSS영역
 --------------------------------------------------------------------------------------------------------------------------------
 ▶chap3 속성
 1) font
+-
 	<style type="text/css">
 	#box1 > h2{
 			font-family: "Times New Roman", sans-serif;
@@ -204,10 +209,11 @@ CSS영역
 
 2) list
 목록 문단에 이미지, 위치, 스타일 제어하기
+-
 	<style type="text/css">
 	#list1{
 		/* list-style-type: square; */
-		list-style-image: url(./../images/arrow.gif)
+		list-style-image: url(./../images/arrow.gif);
 		}
 	</style>
 	
@@ -216,14 +222,14 @@ CSS영역
 
 3) padding/margin
 요소의 크기 지정 및 여백 처리하기
-padding	:p영역 안쪽 여백 	   trbl순서
+padding	:p영역 안쪽 여백 설정	 trbl순서(시계방향)
 margin	:p영역 바깥쪽 여백 설정	trbl순서
-
+-
 	<style type="text/css">
 	p{
 	    border: 2px dotted cyan;
-	    padding: 10px 20px 50px 100px; /* trbl */
-	    margin: 50px 20px; /* 50px 20px *//* trbl */
+	    padding: 10px 20px 50px 100px;
+	    margin: 50px 20px; /* 50px 20px */
 	    margin-left: 30px;
 	    margin-top: 30px
 	}
@@ -231,6 +237,7 @@ margin	:p영역 바깥쪽 여백 설정	trbl순서
 	
 4) border
 테두리
+-
 	<style type="text/css">
 	p{
 		/* border-bottom: 1px dashed blue; */
@@ -241,6 +248,7 @@ margin	:p영역 바깥쪽 여백 설정	trbl순서
 	</style>
 	
 모서리가 둥근 테두리 만들기
+-
 	<style type="text/css">
 	.round1{
 			border: 10px solid #ff9933;
@@ -250,20 +258,23 @@ margin	:p영역 바깥쪽 여백 설정	trbl순서
 	</style>
 	
 5) background
+-
 	<style type="text/css">
 	body{
 		background-color: silver;
 		background-image: url("../images/shoes1.png");
 		background-repeat: repeat-y; /* y축으로 반복 */
 		background-position: top right; /* 시작위치 */
-		background-attachment: fixed; /* 이미지 고정 기본은 scroll */
+		background-attachment: fixed; /* 이미지 고정 */ /* 기본 scroll */
 	}
+	
 	div{
-		background: url("../images/bg1.png") repeat-y fixed
+		background: url("../images/bg1.png") repeat-y fixed;
 	}
 	</style>
 	
 06) shadow
+-
 	<style type="text/css">
 	h1{
 		width: 400px;
@@ -274,7 +285,8 @@ margin	:p영역 바깥쪽 여백 설정	trbl순서
 	}
 	</style>
 	
-07) table
+07) table만들때 잘 쓰이는 속성들
+-
 	<style type="text/css">
 	#table1 th, #table1 td{
 				border: 1px solid;
@@ -290,49 +302,6 @@ margin	:p영역 바깥쪽 여백 설정	trbl순서
 				    background-color: yellow;
 	}
 	</style>
-	--------------------------------------------------------
-	<body>
-        <table id="table1">
-          <caption>렌터카 요금표</caption> 
-            <tr>
-              <th>차종 </th> <!-- 제목 굵게 나옴 -->
-              <th>24시간</th>
-              <th>48시간</th>
-              <th>72시간</th>
-              <th>추가요금</th>
-            </tr>
-            <tr>
-              <td>SM3</td>
-              <td> 45,000</td>
-              <td> 90,000</td>
-              <td> 135,000</td>
-              <td> 6,000</td>
-            </tr>
-            <tr>
-              <td>모닝</td>
-              <td>42,000</td>
-              <td>84,000</td>
-              <td>126,000</td>
-              <td>6,000</td>
-            </tr>
-            <tr>
-              <td>쏘울</td>
-              <td> 61,000</td>
-              <td> 122,000</td>
-              <td> 183,000</td>
-              <td> 9,000</td>
-            </tr>
-            <tr>
-              <td>윈스톰</td>
-              <td> 94,000</td>
-              <td> 188,000 </td>
-              <td> 282,000</td>
-              <td> 13,000</td>
-            </tr>
-            <tr>
-              <td colspan="5">제주 5월 기준이며 추가 요금은 시간당입니다. </td>
-            </tr>
-        </table>
 
 --------------------------------------------------------------------------------------------------------------------------------------
 ▶chap 4 CSS 포지셔닝 속성
