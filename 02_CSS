@@ -54,7 +54,7 @@ style 속성을 이용
 CSS영역
 내장 css 방식
 -
-	<style type="text/css">
+	<style type="text/css">  ★
 	  p{
 	    background-color:gray;
 	    color:blue;
@@ -309,7 +309,7 @@ margin	:p영역 바깥쪽 여백 설정	trbl순서
 
 2) float
 이미지를 글과 같은 선상에 오른쪽/왼쪽 띄우기
-	<style>
+-
 	.floatLeft{
 			float: right; /* 이미지 오른쪽에 띄우기 */
 			margin-left: 30px;
@@ -319,41 +319,42 @@ margin	:p영역 바깥쪽 여백 설정	trbl순서
 			float: left; /* 이미지 왼쪽에 띄우기 */
 			margin-right: 30px;
 	}
-	</style>
-
 
 3) display
 반복되는 요소들 display 어떻게 할 것인가
 이미지 정렬
+-
 	img{
-		display:block; /* 세로로 정렬 */ /* inline 가로정렬 */
-		margin: 10px auto;
+		display : block; /* 세로 정렬 */ /* 기본 inline 가로정렬 */
+		margin : 10px auto;
 	}
 
 4) column
 기사형식으로 문단 나누기
+-
 	#bookPart{ /* div */
-			width: 850px;
-			column-count: 3;
-			column-rule: 1px dashed gray;
-			column-gap: 30px;
-			margin-left: 30px;
-			text-align: justify;
+			width : 850px;
+			column-count : 3;
+			column-rule : 1px dashed gray;
+			column-gap : 30px;
+			margin-left : 30px;
+			text-align : justify;
 	}
 	
 5) transform 
 이미지 회전시킬때
+-
 	#book1 {
-			background:url(../images/snow_book1.png) no-repeat;
-			width:300px;
-			height:193px;	
-			transform: rotate(25deg); /* 중심핀 가운데 */ /* 기본 50% 50% */
-			transform-origin: 20% 40%; /* 중심핀 재설정 가로 20만큼 40만큼에 */
+			background : url(../images/snow_book1.png) no-repeat;
+			width : 300px;
+			height : 193px;	
+			transform : rotate(25deg); /* 중심핀 가운데 */ /* 기본 50% 50% */
+			transform-origin : 20% 40%; /* 중심핀 재설정 가로 20만큼 40만큼에 */
 		}	
 
 06) media
 화면을 축소/확대 할때 화면의 해상도에 따라 그때그때 다른이미지가 나오도록
-	<style type="text/css">
+-
 	@media only screen and (min-width: 320px) and (max-width: 799px){
 		h1{
 			background: url(../images/1.png) no-repeat center top;
@@ -372,6 +373,6 @@ margin	:p영역 바깥쪽 여백 설정	trbl순서
 			height: 700px;
 		}
 	}
-	</style>
+
 
 
