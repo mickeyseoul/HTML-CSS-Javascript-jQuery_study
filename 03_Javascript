@@ -137,31 +137,32 @@ arr.reverse()		내림차순 정렬
 	
 4)2차원 배열 확장포문
 -
-	for( i in arr){ //i=0 1 i에 행번호가 들어감(주소값X)***
+	for( i in arr){ 			//i=0 1 i에 arr의 행index가 들어감 ★
 		document.write(i+"<br>");
-		for( j in arr[i]){
+		for( j in arr[i]){ 		//j에 arr[i]의 데이터들의 index가 들어감 ★
 			document.write(arr[i][j]+"<br>");
 		}
 	}
 
-	java 2차원 배열 확장포문
-	for(int[] t : arr) { //행 하나 전체가 들어감***
+	cf)java 2차원 배열 확장포문
+	for(int[] t : arr) { //행 하나 전체가 들어감
 		for(int x : t) {
 			System.out.print(x+" ");
 		}
 		System.out.println();  
 	}
-	*/
+	
 	
 ▶Date 함수
 var now = new Date();
 now.toString()
-now.toDateString() //날짜만
-now.toTimeString() //시간만
+now.toLocaleString()	대한민국 기준
+now.toDateString()	날짜만
+now.toTimeString()	시간만
 
-now.getYear()+1900 //기준 1900년
-now.getUTCFullYear() //2022년
-now.getMonth()+1 //0월 1월
+now.getYear()+1900	기준 1900년
+now.getUTCFullYear()	2022년
+now.getMonth()+1	0월 1월
 now.getDate()
 
 now.getHours();
