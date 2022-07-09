@@ -8,41 +8,58 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 ------------------------------------------------------------------------------------------
 01_Basic
 ▶대화 상자
-alert 확인
-confirm 확인/취소 true/false 리턴
-prompt (문자열 입력 가능) 문자열 리턴
+alert 
+확인 버튼
 
-▶함수
-<script type="text/javascript">
-  //summer함수 정의
-  function summer(check){  //(자료형안씀)check변수
-    if(check==true){
-     alert("여름은 더운 계절입니다");
-    }else{
-      alert("여름은 시원한 계절입니다");
-    }
-  }
-</script>
-...
-<h2>여름은 더운 계절입니까?</h2>
-<form> <!-- jsp -->
-  <input type="button" value="예" onClick="summer(true)"> <!-- summer 함수 호출 -->
-  <input type="button" value="아니오" onClick="summer(false)">
-</form>
+confirm 
+확인/취소 버튼 
+true/false 리턴
+
+prompt("이름을 입력하세요","") 
+확인/취소 버튼
+확인 클릭: 입력한 값이 변수에 들어옴 => 문자열 리턴
+취소 클릭: 변수에 null
+
+▶변수 var
+Number/String/boolean 구분없이 사용
+
+▶document.out()
+웹브라우저에 출력하는 명령어
+
+▶함수 만들기
+-
+	<script type="text/javascript">
+	  function summer(check){  		//summer함수 정의 //(자료형안씀)check변수
+	    if(check==true){
+	     alert("여름은 더운 계절입니다");
+	    }else{
+	      alert("여름은 시원한 계절입니다");
+	    }
+	  }
+	</script>
+
+	<body>
+	  <h2>여름은 더운 계절입니까?</h2>
+	  <form> <!-- jsp -->
+	    <input type="button" value="예" onClick="summer(true)"> <!-- summer 함수 호출 -->
+	    <input type="button" value="아니오" onClick="summer(false)">
+	  </form>
+	<body>
 
 
 ▶전역변수/지역변수
-var 붙여야 하는 경우: 지역변수
-var 안붙여도 되는 경우: 전역변수 선언초기화시 , 전역변수 사용시
+변수 선언시
+var 붙여야 하는 경우	:지역변수 
+var 안붙여도 되는 경우 :전역변수
 
 ▶문자열을 정수로 바꿔주는 함수
-Number("15+3*4") //NaN Not a Number 정수외의 것 있으면 안됨
-parseInt("15+3*4") //15
-eval("15+3*4") //27
+Number("15+3*4") 	//NaN Not a Number 정수외의 것 있으면 안됨
+parseInt("15+3*4") 	//15
+eval("15+3*4") 		//27
 
-Number("1.23") //1.23
-parseInt("1.23") //1 딱 정수만
-eval("1.23") // 1.23
+Number("1.23") 		//1.23 Number라고 실수는 나옴
+parseInt("1.23") 	//1 딱 정수만
+eval("1.23") 		// 1.23
 
 
 ▶조건문
@@ -55,6 +72,7 @@ while
 
 ------------------------------------------------------------------------------------------
 02_implicitObj
+
 ▶Array
 ▷배열 만드는 방법
 1)
@@ -62,9 +80,11 @@ var a = new Array(3); 방3개
 var a = Array(3);
 a[0]=10;
 a[1]=20;
+
 2)
 var b = new Array(3,4,5);
 var c = Array('one','two','three');
+
 3)
 var d = ['rose','tulip',"lily","cosmos"];
 
@@ -74,16 +94,17 @@ java의 배열 :같은 타입의 데이터을 한데 묶어서 관리
 javascript의 배열 :다양한 데이터 타입 묶음 가능
 
 ▷확장for문
-for( x in e ){ 
-document.write(e[x]+"<br>")
-}
+-
+	for( x in e ){	//x에 데이터가 들어가는 게 아니라 index만 들어감	!=java는 데이터가 들어감 ★
+		document.write(e[x]+"<br>")
+	}
 
 
-▷함수
-arr.concat(arr2);
-arr.slice(1,3); /* 1부터 3전까지 출력 */
-arr.sort(); //오름차순 정렬
-arr.reverse(); //내림차순 정렬
+▷Array 함수
+arr.concat(arr2)	연결하기
+arr.slice(1,3)		1부터 3전까지 출력
+arr.sort()		오름차순 정렬
+arr.reverse()		내림차순 정렬
 
 ▷2차원배열
 2차원 배열 만들기
@@ -115,22 +136,22 @@ arr.reverse(); //내림차순 정렬
 		   ];
 	
 4)2차원 배열 확장포문
-for( i in arr){ //i=0 1 i에 행번호가 들어감(주소값X)***
-	document.write(i+"<br>");
-	for( j in arr[i]){
-		document.write(arr[i][j]+"<br>");
+-
+	for( i in arr){ //i=0 1 i에 행번호가 들어감(주소값X)***
+		document.write(i+"<br>");
+		for( j in arr[i]){
+			document.write(arr[i][j]+"<br>");
+		}
 	}
-}
-	
-/*
-java 2차원 배열 확장포문
-for(int[] t : arr) { //행 하나 전체가 들어감***
-	for(int x : t) {
-		System.out.print(x+" ");
+
+	java 2차원 배열 확장포문
+	for(int[] t : arr) { //행 하나 전체가 들어감***
+		for(int x : t) {
+			System.out.print(x+" ");
+		}
+		System.out.println();  
 	}
-	System.out.println();  
-}
-*/
+	*/
 	
 ▶Date 함수
 var now = new Date();
