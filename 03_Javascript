@@ -206,9 +206,9 @@ Math.floor(Math.random()*45+1)
 
 
 ▶Option("text","value")
-<select>의 option을 javascript 함수 option()으로  넣기
+<select>의 <option>을 javascript 함수 option()으로  넣기
 ▷주요 함수
-myform.first.option[0] = new Option("선택");	//option에 value값 넣기
+myform.first.option[0] = new Option("선택");	//option 배열 만든 후 option에 value값 넣기
 myform.first.selectedIndex
 myform.first[index].value
 myform.first.text
@@ -425,7 +425,8 @@ var reg = /^\w{5,10}$/;
 
 ▷유효성 검사
 -
-	var msg = window.document.forms[0].name_idNumber.value;
+	var reg =  /^\w{5,10}$/;
+	var msg = window.document.myform.password.value;
 
 	if(msg.search(reg) == -1){
 	alert("잘못된 형식")
