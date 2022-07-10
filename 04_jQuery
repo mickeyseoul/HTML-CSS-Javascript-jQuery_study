@@ -1,32 +1,30 @@
 ▶jQuery
 javascript의 일종으로 jQuery함수를 사용하여 javascript를 좀 더 다양하게 사용 가능	cf)jQuery도 "" '' 구분 안함 ==javascript
--
-DOM Document
+
+▷jQuery 다운로드 사이트 
+jquery.com
+
+▷DOM Document
 tag를 객체로 만들어 사용***
 document도 객체로 만든 후 사용
--
-$(" ") 
+
+▷$(" ") 
 :html 태그를 객체로 만들기 		
  따옴표 안에 css 선택자(태그,class/id,자식/자손,속성 등등) 입력	!= $(document) 변수 등은 따옴표 안들어감
--
-jQuery 다운로드 사이트 
-jquery.com
--
-jQuery 함수
-ctrl+f 로 찾아보기
--
-javascript영역에 jquery 소스 넣기
+
+▷javascript영역에 jquery 소스 넣기
 
   <script type="text/javascript" src="./../js/jquery.js"></script>
   <script type="text/javascript">
   </script>
 
-
+▷jQuery 함수
+ctrl+f 로 찾아보기
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 목차
-chap 01
-chap 02
+chap 01 태그 객체의 함수
+chap 02 태그 객체의 함수
 chap 03 접근
 chap 04 태그에 태그 추가/삭제
 chap 05 이벤트 함수 묶어서 사용하기/ 이벤트 함수 이벤트 처리도 같이 위임하기
@@ -34,8 +32,6 @@ chap 06 이벤트 함수
 chap 07 외부파일/Json파일/xtml파일 불러와 사용하기
 chap 08 jQuery 플러그인
 
-
-jQuery 태그 객체의 함수
 ------------------------------------------------------------------------------------------
 chap 01
 ▶ready(function(){}) 
