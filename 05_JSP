@@ -84,15 +84,15 @@ String[] names = request.getParameterNames()
 
 
 ▶03_response
+:response1 web 출력 전혀 안되고 바로 reponse2.jsp로 감 cf)콘솔 출력은 됨
 request 객체를 공유하지 않음
 최종페이지와 주소가 같음 http://localhost:8080/01_Basic/03_response/reponse2.jsp
+response 내장객체 참조변수
+request로 요청한 form의 정보 reponse2.jsp로 안넘어감 -> request 객체를 공유하지 않음
 -
 	//HttpServletRequest response = new HttpServletRequest();
 	response.sendRedirect("reponse2.jsp"); 
 
-response 내장객체 참조변수
-request로 요청한 form의 정보 reponse2.jsp로 안넘어감 -> request 객체를 공유하지 않음
-web출력 전혀 안되고 바로 reponse2.jsp로 감 cf)콘솔 출력은 됨
 
 챙겨가는 법(1) ★
 -
@@ -101,7 +101,11 @@ web출력 전혀 안되고 바로 reponse2.jsp로 감 cf)콘솔 출력은 됨
 
 
 ▶04_session
+:result1 출력 후 result2 출력
 request 객체를 공유함
+session 웹브라우저당 하나의 객체 만들어짐
+-> 하나의 웹브라우저당 공통으로 쓰이는 것이 필요할 때 사용
+//ex)로그인 계정 사용
 
 1 -> 2(session설정) -> 3(session가져오기)
 챙겨가는 법(2) ★
@@ -109,9 +113,6 @@ request 객체를 공유함
 	2
 	//HttpSession session = new HttpSession();
  	 session.setAttribute("abc", id); //속성명, 값 abc이름에 id값(abc=kim)
-session 웹브라우저당 하나의 객체 만들어짐
--> 하나의 웹브라우저당 공통으로 쓰이는 것이 필요할 때 사용
-//ex)로그인 계정 사용
 -
 	2
 	session.setMaxInactiveInterval(10); // 1 = 1초 // 기본 30분
