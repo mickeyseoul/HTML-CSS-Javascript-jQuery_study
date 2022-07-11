@@ -109,7 +109,7 @@ request 객체를 공유함
 -
   String id = (String)session.getAttribute("abc");
 -
-  session.setMaxInactiveInterval(10); // 1 = 1초 //기본 30분
+  session.setMaxInactiveInterval(10); // 1 = 1초 // 기본 30분
 -
   session.invalidate() 
 설정 무효화 
@@ -129,7 +129,12 @@ hidden form에 있지만 보이지 않음
 <input type="hidden" name="passwd" value="<%= passwd%>"> <br>
 
 
+---
+form -> via -> result
+via에서 하는 작업
+
 ▶05_includingActionTag
+:via에서 result를 포함하여 웹브라우저에 출력 
 request 객체를 공유함
 
 include 지시어 : 외부화일 복사붙여넣기(코드 자체를)
@@ -154,9 +159,10 @@ namespace
 
 
 ▶06_forwardAction
+:via 웹브라우저 출력없이 잠깐거쳤다가 바로 result로
 request 객체를 공유함
-거쳐가는 페이지 안보이게 하고싶을 때/보통 DB작업을 여기서 함
-via 웹브라우저 출력없이 잠깐거쳤다가 바로 result로
+거쳐가는 페이지 안보이게 하고 싶을 때/보통 DB작업을 여기서 함
+
 -
 	<jsp:forward page="Ex01_result.jsp"/>
 -
