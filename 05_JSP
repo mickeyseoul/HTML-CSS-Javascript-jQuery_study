@@ -85,6 +85,7 @@ String[] names = request.getParameterNames()
 
 ▶03_response
 request 객체를 공유하지 않음
+최종페이지와 주소가 같음
 -
   response.sendRedirect("reponse2.jsp"); 
   
@@ -154,4 +155,20 @@ namespace
 
 ▶06_forwardAction
 request 객체를 공유함
+거쳐가는 페이지 안보이게 하고싶을 때/보통 DB작업을 여기서 함
+via 웹브라우저 출력없이 잠깐거쳤다가 바로 result로
+-
+	<jsp:forward page="Ex01_result.jsp"/>
+-
+	<jsp:forward page="Ex01_result.jsp">
+	<jsp:param value="50" name="age"/>
+	</jsp:forward> 
+http://localhost:8080/01_Basic/06_forwardActionTag/Ex01_via.jsp
+최종페이지와 주소가 같지 않음
+
+
+
+
+
+
 
