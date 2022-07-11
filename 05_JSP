@@ -30,8 +30,8 @@ Apachi 네트워크 설정
 
 ▶JSP사용 요건
 Webapp폴더에
-lib폴더 만든 후
-tomcat9.0 파일탐색기-lib 폴더-servlet-api.jar 가져다 넣기
+WEB-INF - lib에
+파일탐색기 - tomcat9.0 -lib 폴더-servlet-api.jar 가져다 넣기
 
 ------------------------------------------------------------------
 01_Basic
