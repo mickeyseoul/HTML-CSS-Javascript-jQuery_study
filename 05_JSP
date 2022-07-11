@@ -66,7 +66,12 @@ post
 한글 깨짐 -> result 페이지에 처리 필수 request.setCharacterEncoding("UTF-8");
 
 ▶내장객체 request
-:요청한 쪽에서 정보가 담김
+:요청한 쪽에서 정보가 담김 ★
+String value = request.getParameter("name값")
+String[] values = request.getParameterValues("name값") //checkbox의 value값 전부 배열로 리턴
+String[] names = request.getParameterNames() 
+  체크한(값이 있는) name값만 전부 배열로 리턴
+  체크 안한 name은 아예 넘어오지를 않음 -> 체크 안하는 것을 허용하려면 일일이 가져오는 방법을 선택해야 함
 
 
 
