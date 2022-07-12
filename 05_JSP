@@ -164,7 +164,7 @@ namespace
 
 
 ▶06_forwardAction
-:via 웹브라우저 출력없이 잠깐거쳤다가 바로 result 출력
+:via 웹브라우저 출력없이 잠깐거쳤다가 바로 result 출력 후 다시 via로 돌아옴
 request 객체를 공유함
 최종페이지와 주소가 같지 않음 http://localhost:8080/01_Basic/06_forwardActionTag/Ex01_via.jsp
 거쳐가는 페이지 안보이게 하고 싶을 때/보통 DB작업을 여기서 함
