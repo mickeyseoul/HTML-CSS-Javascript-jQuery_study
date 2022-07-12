@@ -82,8 +82,8 @@ String[] names = request.getParameterNames()
   체크한(값이 있는) name값만 전부 배열로 리턴
   체크 안한 name은 아예 넘어오지를 않음 -> 체크 안하는 것을 허용하려면 일일이 가져오는 방법을 선택해야 함
 
-
-▶03_response	*request 객체를 공유하지 않음	cf)forwardActionTag 비교
+cf)forwardActionTag 비교 거쳐가는 페이지
+▶03_response	*request 객체를 공유하지 않음	
 :response1 web출력 전혀 안되고 바로 reponse2.jsp로 감 cf)콘솔 출력은 됨
 최종페이지와 주소가 같음 http://localhost:8080/01_Basic/03_response/reponse2.jsp
 response 내장객체 참조변수
@@ -161,8 +161,8 @@ namespace
 	    <jsp:param value="30" name="age"/> 
   </jsp:include>
 
-
-▶06_forwardActionTag	*request 객체를 공유함	cf)response 비교
+cf)response 비교 거쳐가는 페이지
+▶06_forwardActionTag	*request 객체를 공유함	
 :via 출력X(웹브라우저 출력없이 잠깐거쳤다가) -> result 출력 후 -> via(다시 돌아온 후의 웹브라우저 출력도 안함)
 최종페이지와 주소가 같지 않음 http://localhost:8080/01_Basic/06_forwardActionTag/Ex01_via.jsp
 거쳐가는 페이지 안보이게 하고 싶을 때/보통 DB작업을 여기서 함
