@@ -83,9 +83,8 @@ String[] names = request.getParameterNames()
   체크 안한 name은 아예 넘어오지를 않음 -> 체크 안하는 것을 허용하려면 일일이 가져오는 방법을 선택해야 함
 
 
-▶03_response
-:response1 web 출력 전혀 안되고 바로 reponse2.jsp로 감 cf)콘솔 출력은 됨
-request 객체를 공유하지 않음
+▶03_response	*request 객체를 공유하지 않음	cf)forwardActionTag 비교
+:response1 web출력 전혀 안되고 바로 reponse2.jsp로 감 cf)콘솔 출력은 됨
 최종페이지와 주소가 같음 http://localhost:8080/01_Basic/03_response/reponse2.jsp
 response 내장객체 참조변수
 request로 요청한 form의 정보 reponse2.jsp로 안넘어감 -> request 객체를 공유하지 않음
@@ -100,9 +99,8 @@ request로 요청한 form의 정보 reponse2.jsp로 안넘어감 -> request 객�
 이런식으로 억지로 챙겨보낼 수 있음
 
 
-▶04_session
+▶04_session	*request 객체를 공유함
 :result1 출력 후 result2 출력
-request 객체를 공유함
 session 웹브라우저당 하나의 객체 만들어짐
 -> 하나의 웹브라우저당 공통으로 쓰이는 것이 필요할 때 사용
 //ex)로그인 계정 사용
@@ -138,8 +136,9 @@ hidden form에 있지만 보이지 않음
 form -> via -> result
 via에서 하는 작업
 
-▶05_includingActionTag
-:via 출력 후 result 출력 
+▶05_includingActionTag	*request 객체를 공유함
+:via 출력 후 -> result 출력 후 -> via
+최종페이지와 주소가 같지 않음 http://localhost:8080/01_Basic/05_includeActionTag/Ex01_via.jsp
 request 객체를 공유함
 
 include 지시어 : 외부화일 복사붙여넣기(코드 자체를)
@@ -163,9 +162,8 @@ namespace
   </jsp:include>
 
 
-▶06_forwardAction
-:via 웹브라우저 출력없이 잠깐거쳤다가 바로 result 출력 후 다시 via로 돌아옴
-request 객체를 공유함
+▶06_forwardActionTag	*request 객체를 공유함	cf)response 비교
+:via 출력X(웹브라우저 출력없이 잠깐거쳤다가) -> result 출력 후 -> via(다시 돌아온 후의 웹브라우저 출력도 안함)
 최종페이지와 주소가 같지 않음 http://localhost:8080/01_Basic/06_forwardActionTag/Ex01_via.jsp
 거쳐가는 페이지 안보이게 하고 싶을 때/보통 DB작업을 여기서 함
 
