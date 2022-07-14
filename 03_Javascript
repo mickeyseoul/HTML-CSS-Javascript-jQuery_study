@@ -5,11 +5,11 @@
 api 사이트
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 
-▷Web 영역
+▷Web 영역(객체)
 영역자체가 객체라 객체에 따른 함수 사용
-window영역()
+window 영역
 	window.document...
-	window.open
+	window.open	cf)window 생략 가능
 document 영역
 	document.out()
 	document.getElementById()
@@ -18,7 +18,7 @@ document 영역
 		area.innerHTML = "선택한 메뉴는<br>"+f_selValue+","+s_selValue+"입니다.";
 form 영역
 history 영역
-location 주소창 영역
+location 영역 주소창
 
 
 -----------------------------------------------------------------------------------------
