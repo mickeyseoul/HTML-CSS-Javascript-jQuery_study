@@ -1,6 +1,5 @@
 ▶학습 퀴즈 사이트
 
-
 ▶
 html 구조
 css 디자인
@@ -16,5 +15,10 @@ Javascript/jQuery
 큰 따옴표와 작은 따옴표 구분 X
 문자열 비교 ==로 가능   != java의 .equals
 
+▶
+label
+span
+문자열에 쓰이는 태그
+태그가 없으면 편집할 수가 없기 때문
 
 
